@@ -1,3 +1,5 @@
+// constants/organization.js
+
 export const organizationExperiences = [
   {
     title: "AIESEC Future Leaders",
@@ -15,7 +17,7 @@ export const organizationExperiences = [
     company_name: "Kompetegram",
     icon: "/assets/organization/KTG-Logo.png",
     iconBg: "#212832",
-    date: "October 2024 - Present",
+    date: "February 2024 - Present",
     contents: [
       "Actively engaged in a community focused on learning and developing programming skills, particularly in JavaScript and web development.",
       "Participated in workshops, coding challenges, and collaborative projects to enhance technical expertise.",

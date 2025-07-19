@@ -1,17 +1,20 @@
 // src/sections/Achievements.jsx
+
+// Import Component
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import { motion } from "framer-motion";
-
-import "react-vertical-timeline-component/style.min.css";
-
-import { styles } from "../styles";
-// Impor data pencapaian dari constants
-import { achievements } from "../constants/achievements"; // Pastikan path ini benar!
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
+import "react-vertical-timeline-component/style.min.css";
+import { styles } from "../styles";
+
+// Impor data pencapaian dari constants
+import { achievements } from "../constants/achievements"; // Pastikan path ini benar!
+
+
 
 // Komponen kartu pencapaian
 const AchievementCard = ({ achievement }) => {

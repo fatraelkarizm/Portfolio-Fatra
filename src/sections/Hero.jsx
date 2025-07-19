@@ -17,6 +17,7 @@ const Hero = () => {
       <StarsCanvas />
       <HeroText />
       <Background />
+      
 
       <figure className="absolute inset-0"
         style={{ width: "100vw", height: "100vh" }}>
@@ -32,8 +33,10 @@ const Hero = () => {
           />
         </Canvas>
       </figure>
+      
     </section>
   )
 }
+
 
 export default SectionWrapper(Hero, "hero");

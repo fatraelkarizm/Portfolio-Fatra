@@ -1,12 +1,14 @@
+// constants/reviews.js
+
 export const reviews = [
   {
-    name: "Jack",
-    username: "@jack",
+    name: "Sheila",
+    username: "@Sheila",
     body: "I've never seen anything like this before. It's amazing. I love it.",
     img: "https://robohash.org/jack",
   },
   {
-    name: "Jill",
+    name: "alice",
     username: "@jill",
     body: "I don't know what to say. I'm speechless. This is amazing.",
     img: "https://robohash.org/jill",

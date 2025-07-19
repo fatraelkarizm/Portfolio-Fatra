@@ -2,11 +2,9 @@ import React, { useState, useRef, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
 
-// import * as random from "maath/random/dist/maath-random.esm"; // <-- Komentari ini
 
 const StarBackground = (props) => {
   const ref = useRef();
-  // --- UBAH BAGIAN INI UNTUK PENGUJIAN ---
   const [sphere] = useState(() => {
     const positions = new Float32Array(5000 * 3); // 5000 bintang * 3 koordinat (x,y,z)
     for (let i = 0; i < 5000; i++) {
@@ -51,7 +49,7 @@ const StarBackground = (props) => {
 };
 
 const StarsCanvas = () => (
-  <div className="w-full h-auto fixed inset-0 z-[0] pointer-events-none">
+  <div className="w-full h-auto fixed inset-0 z-[-5] pointer-events-none">
     <Canvas
       camera={{ position: [0, 0, 1] }}
       className="w-full h-full"

@@ -1,5 +1,6 @@
-export const learningExperiences = [
+// constants/learningExperiences.js
 
+export const learningExperiences = [
   {
     title: "Fullstack Web Development",
     company_name: "Self-Taught / Online Resources",
@@ -7,10 +8,11 @@ export const learningExperiences = [
     iconBg: "#000000",
     date: "September 2023 - Present",
     contents: [
-      "Mempelajari dasar-dasar pengembangan web menggunakan HTML, CSS, dan JavaScript.",
-      "Mengembangkan website responsif dan interaktif dari nol.",
-      "Memahami konsep-konsep dasar DOM manipulation dan event handling.",
-      "Menerapkan best practice untuk struktur kode yang bersih dan terorganisir.",
+      "Learned the fundamentals of web development using HTML, CSS, and JavaScript.",
+      "Developed responsive and interactive websites from scratch.",
+      "Understood basic concepts of DOM manipulation and event handling.",
+      "Applied best practices for clean and organized code structure.",
+      "Fetching data and interacting with APIs.",
     ],
   },
   {
@@ -20,34 +22,34 @@ export const learningExperiences = [
     iconBg: "#000000",
     date: "September 2023 - Present",
     contents: [
-      "Mendalami penggunaan Python untuk analisis data dengan Pandas.",
-      "Mempelajari dasar-dasar Artificial Intelligence (AI) dan Machine Learning (ML).",
-      "Menggunakan lingkungan pengembangan seperti Conda dan Jupyter Notebook untuk eksperimen data.",
+      "Delved into Python for data analysis using Pandas.",
+      "Learned the basics of Artificial Intelligence (AI) and Machine Learning (ML).",
+      "Utilized development environments like Conda and Jupyter Notebook for data experimentation.",
     ],
   },
   {
-    title: "C++: Data Structures & Algorithms",
+    title: "C++ Data Structures & Algorithms",
     company_name: "College Material",
     icon: "/assets/logos/cplusplus.svg",
     iconBg: "#000000",
     date: "January 2024 - June 2024",
     contents: [
-      "Mempelajari implementasi dan penggunaan berbagai Struktur Data: Stack, Queue, Linked List, Tree (Binary Tree, BST), Hash Table, Heap.",
-      "Mendalami Algoritma: Depth-First Search (DFS), Breadth-First Search (BFS), Sorting Algorithms (Merge Sort, Quick Sort), Searching Algorithms.",
-      "Memahami konsep Pointer dan Memory Management di C++.",
-      "Menerapkan algoritma untuk menyelesaikan masalah komputasi yang kompleks.",
+      "Studied the implementation and usage of various Data Structures: Stack, Queue, Linked List, Tree (Binary Tree, BST), Hash Table, Heap.",
+      "Explored Algorithms: Depth-First Search (DFS), Breadth-First Search (BFS), Sorting Algorithms (Merge Sort, Quick Sort), Searching Algorithms.",
+      "Understood Pointer concepts and Memory Management in C++.",
+      "Applied algorithms to solve complex computational problems.",
     ],
   },
   {
-    title: "Java Programming",
+    title: "Java OOP Programming",
     company_name: "College Material",
     icon: "/assets/logos/java.svg",
     iconBg: "#000000",
     date: "February 2025 - Present",
     contents: [
-      "Mempelajari konsep Object-Oriented Programming (OOP) secara mendalam: Encapsulation, Inheritance, Polymorphism, Abstraction.",
-      "Mendalami Functional Programming concepts di Java.",
-      "Memahami penggunaan Collections Framework dan penanganan exception handling.",
+      "Learned Object-Oriented Programming (OOP) concepts in depth: Encapsulation, Inheritance, Polymorphism, Abstraction.",
+      "Delved into Functional Programming concepts in Java.",
+      "Understood the use of Collections Framework and exception handling.",
     ],
   },
   {
@@ -57,22 +59,24 @@ export const learningExperiences = [
     iconBg: "#000000",
     date: "September 2024 - Present",
     contents: [
-      "Menguasai dasar-dasar SQL untuk manipulasi dan query data.",
-      "Mempelajari pembuatan dan pengelolaan Database, Table, dan Index.",
-      "Memahami View, Trigger, Function, dan Stored Procedure untuk efisiensi database.",
-      "Menganalisis dan mengoptimalkan kinerja query database.",
+      "Mastered SQL fundamentals for data manipulation and querying.",
+      "Learned database, table, and index creation and management.",
+      "Understood Views, Triggers, Functions, and Stored Procedures for database efficiency.",
+      "Analyzed and optimized database query performance.",
     ],
   },
   {
-    title: "React.js Development",
+    title: "React.js Web Development",
     company_name: "Self-Taught / Online Resources",
     icon: "/assets/logos/react.svg",
     iconBg: "#000000",
     date: "February 2024 - Present",
     contents: [
-      "Mempelajari dasar-dasar React.js: Components, Props, State, dan Hooks (useState, useEffect, useRef).",
-      "Membangun Single Page Applications (SPA) yang interaktif dan dinamis.",
-      "Memahami konsep Virtual DOM dan Reconciliation.",
+      "Learned React.js fundamentals: Components, Props, State, and Hooks (useState, useEffect, useRef).",
+      "Built interactive and dynamic Single Page Applications (SPA).",
+      "Understood Virtual DOM and Reconciliation concepts.",
+      "Utilized React Router for client-side routing.",
+      "Applied best practices for code organization and maintainability.",
     ],
   },
 ];

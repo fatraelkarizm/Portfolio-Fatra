@@ -1,18 +1,18 @@
 import { useState } from 'react';
 import { ExternalLink, Github, X, BookOpen } from 'lucide-react';
 
-// Import semua konstanta dari file constants/index.js
-import { listProjects} from '../constants/projects';
-import {tagIcons} from '../constants/tagIcons';
+import { listProjects } from '../constants/projects';
 
 import { SectionWrapper } from '../hoc';
+import { TechBadge } from '../components/TechBadge';
+
 
 export const Projects = () => {
   const [activeCategory, setActiveCategory] = useState('All');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const categories = ['All', 'Website', 'Mobile', 'UI/UX'];
+  const categories = ['All', 'Website', 'UI/UX', 'Terminal', 'Mobile'];
 
   const filteredProjects = listProjects.filter((project) => {
     if (activeCategory === 'All') {
@@ -43,7 +43,7 @@ export const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-24 px-4 relative">
+    <section id="projects" className="py-18 px-4 relative">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
           Featured <span className="text-purple-600"> Projects </span>
@@ -54,7 +54,7 @@ export const Projects = () => {
           detail, performance, and user experience.
         </p>
 
-        <div className="flex justify-center items-center gap-4 mb-12 cursor-pointer">
+        <div className="flex justify-center items-center gap-4 mb-12 cursor-pointer px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           {categories.map((category) => (
             <button
               key={category}
@@ -74,72 +74,70 @@ export const Projects = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project) => (
-            <div
-              key={project.id}
-              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
-            >
-              <div className="h-48 overflow-hidden cursor-pointer" onClick={() => openModal(project)}>
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
-
-              <div className="p-6 cursor-default">
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag, index) => {
-
-                    const iconData = tagIcons[tag];
-                    const IconComponent = iconData ? iconData.component : null;
-                    const iconColor = iconData ? iconData.color : null;
-
-                    return (
-                      <span
-                        key={index}
-                        className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground flex items-center gap-1"
-                      >
-                        {IconComponent && <IconComponent size={14} color={iconColor} />}
-                        {tag}
-                      </span>
-                    );
-                  })}
+          {filteredProjects.length > 0 ? ( // Kondisi untuk menampilkan proyek atau pesan
+            filteredProjects.map((project) => (
+              <div
+                key={project.id}
+                className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
+              >
+                <div className="h-48 overflow-hidden cursor-pointer" onClick={() => openModal(project)}>
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-fit object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
                 </div>
 
-                <h3 className="text-xl font-semibold mb-1"> {project.title}</h3>
-                <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
-                  {project.description}
-                </p>
-                <div className="flex justify-between items-center">
-                  <div className="flex space-x-3">
-                    {project.demoUrl && project.demoUrl !== '#' && (
-                      <a
-                        href={project.demoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-foreground/80 hover:text-purple-600 transition-colors duration-300"
-                      >
-                    
-                        <ExternalLink size={20} />
-                      </a>
-                    )}
-                    {project.githubUrl && project.githubUrl !== '#' && (
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-foreground/80 hover:text-purple-600 transition-colors duration-300"
-                      >
-                        
-                        <Github size={20} />
-                      </a>
-                    )}
+                <div className="p-6 cursor-default">
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tags.map((tag, index) => {
+                      // Menggunakan TechBadge komponen di sini
+                      return <TechBadge key={index} tech={tag} />;
+                    })}
+                  </div>
+
+                  <h3 className="text-xl font-semibold mb-1"> {project.title}</h3>
+                  <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
+                    {project.description}
+                  </p>
+                  <div className="flex justify-between items-center">
+                    <div className="flex space-x-3">
+                      {project.demoUrl && project.demoUrl !== '#' && (
+                        <a
+                          href={project.demoUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-foreground/80 hover:text-purple-600 transition-colors duration-300"
+                        >
+                          <ExternalLink size={20} />
+                        </a>
+                      )}
+                      {project.githubUrl && project.githubUrl !== '#' && (
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-foreground/80 hover:text-purple-600 transition-colors duration-300"
+                        >
+                          <Github size={20} />
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
+            ))
+          ) : (
+            // Pesan jika tidak ada proyek yang difilter
+            <div className="col-span-1 md:col-span-2 lg:col-span-3 text-center py-10">
+              <p className='text-3xl font-bold mb-2'>
+                Under <span className='text-purple-600'>Maintenance</span> ( •͈ ᴗ •͈ )
+              </p>
+              <p className="text-lg text-gray-400">
+                The Developer is still <span className='text-purple-600 font-bold'>studying</span> it or maybe working on it.
+              </p>
             </div>
-          ))}
+          )}
         </div>
 
         <div className="text-center mt-12">
@@ -180,19 +178,8 @@ export const Projects = () => {
               <h3 className="text-2xl font-bold mb-2">{selectedProject.title}</h3>
               <div className="flex flex-wrap gap-2 mb-4">
                 {selectedProject.tags.map((tag, index) => {
-                  const iconData = tagIcons[tag];
-                  const IconComponent = iconData ? iconData.component : null;
-                  const iconColor = iconData ? iconData.color : null;
-
-                  return (
-                    <span
-                      key={index}
-                      className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground flex items-center gap-1"
-                    >
-                      {IconComponent && <IconComponent size={14} color={iconColor} />}
-                      {tag}
-                    </span>
-                  );
+                  // Menggunakan TechBadge komponen di sini juga untuk modal
+                  return <TechBadge key={index} tech={tag} />;
                 })}
               </div>
               <p className="text-muted-foreground mb-4">{selectedProject.description}</p>
@@ -225,7 +212,7 @@ export const Projects = () => {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 px-4 py-2 bg-[#007ACC] text-white rounded-md hover:bg-[#006acc] transition-colors duration-300 flex-grow sm:flex-grow-0 justify-center"
                   >
-                    <BookOpen size={18}/> Research
+                    <BookOpen size={18} /> Research
                   </a>
                 )}
               </div>

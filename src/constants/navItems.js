@@ -1,3 +1,5 @@
+//constants/navItems.js
+
 export const navItems = [
     { id: 'hero', title: 'Home' },
     { id: 'about', title: 'About' },

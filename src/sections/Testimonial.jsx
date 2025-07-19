@@ -37,7 +37,7 @@ const ReviewCard = ({ img, name, username, body }) => {
 function Testimonial() {
   return (
     <div className="items-start md:mt-12 c-space">
-      <h2 className="text-heading z-100">Hear From My Clients</h2>
+      <h2 className="text-heading z-100 text-center">What They <span className="text-purple-600">Thought</span></h2>
       <div className="relative flex flex-col items-center justify-center w-full mt-12 overflow-hidden">
         <Marquee pauseOnHover className="[--duration:20s]">
           {firstRow.map((review) => (

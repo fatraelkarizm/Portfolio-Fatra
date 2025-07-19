@@ -1,25 +1,13 @@
 // src/sections/Certifications.jsx
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SectionWrapper } from '../hoc';
 import { textVariant, fadeIn } from '../utils/motion';
 import { styles } from '../styles';
 
-// Import certifications data
 import { certifications } from '../constants/certifications';
-import { tagIcons } from '../constants/tagIcons';
+import { TechBadge } from '../components/TechBadge';
+import { CalculateDate } from '../components/CalculateDate';
 
-const TechBadge = ({ tech }) => {
-  const IconComponent = tagIcons[tech] ? tagIcons[tech].component : null;
-  const iconColor = tagIcons[tech] ? tagIcons[tech].color : '#FFFFFF'; // Default to white if not found
-
-  return (
-    <span className="inline-flex items-center bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-200 mr-2 mb-2">
-      {IconComponent && <IconComponent style={{ color: iconColor }} className="mr-1" />}
-      {tech}
-    </span>
-  );
-};
 
 const CertificationCard = ({ certification }) => {
   return (
@@ -33,7 +21,7 @@ const CertificationCard = ({ certification }) => {
       <img
         src={certification.image}
         alt={certification.title}
-        className="w-full h-40 object-cover rounded-md mb-4"
+        className="w-fit h-fit object-fit rounded-md mb-4"
       />
       <h3 className="text-white text-xl font-bold mb-2">{certification.title}</h3>
       <p className="text-secondary text-base mb-2">{certification.issuer} - {certification.date}</p>
@@ -60,6 +48,12 @@ const CertificationCard = ({ certification }) => {
 };
 
 const Certifications = () => {
+  const sortedCertifications = [...certifications].sort((a, b) => {
+    const dateA = CalculateDate(a.date);
+    const dateB = CalculateDate(b.date);
+    return dateB - dateA;
+  });
+
   return (
     <>
       <motion.div variants={textVariant()} initial="hidden" whileInView="show" viewport={{ once: true }} className='text-center z-100'>
@@ -68,7 +62,7 @@ const Certifications = () => {
       </motion.div>
 
       <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {certifications.map(cert => (
+        {sortedCertifications.map(cert => (
           <CertificationCard key={cert.id} certification={cert} />
         ))}
       </div>

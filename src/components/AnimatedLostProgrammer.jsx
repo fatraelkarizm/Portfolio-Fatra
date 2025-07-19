@@ -9,8 +9,8 @@ const AnimatedLostProgrammer = ({ scale, position }) => {
   const timeRef = useRef(0);
 
   // useFrame adalah hook dari @react-three/fiber yang menjalankan callback setiap frame
-  useFrame((state, delta) => {
-    if (!meshRef.current) return; // Pastikan mesh ada sebelum mencoba mengaksesnya
+  useFrame((state, delta) => {  
+    if (!meshRef.current) return;
 
     timeRef.current += delta; // Akumulasi waktu
     const time = timeRef.current;
@@ -68,4 +68,4 @@ const AnimatedLostProgrammer = ({ scale, position }) => {
   );
 };
 
-export default AnimatedLostProgrammer; // Export komponen sebagai default
+export default AnimatedLostProgrammer;

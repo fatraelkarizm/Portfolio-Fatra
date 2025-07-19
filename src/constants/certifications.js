@@ -3,48 +3,69 @@
 export const certifications = [
   {
     id: "cert-1",
-    title: "AWS Certified Cloud Practitioner",
-    image: "/assets/projects/game-engine.jpg", // Biarkan path gambar default
-    issuer: "Amazon Web Services",
-    technologies: ["React"], // Contoh penyesuaian untuk match tagIcons
-    date: "March 2024",
-    link: "https://www.credly.com/badges/your-aws-badge-id",
-    category: "Cloud Computing",
-    description: "Memahami dasar-dasar cloud AWS, layanan inti, keamanan, arsitektur, dan model harga.",
+    title: "Pertamina: Seed and Scale",
+    image: "/assets/certifications/pertamina-seed-n-scale.jpg", 
+    issuer: "Pertamina",
+    technologies: [], 
+    date: "October 2024",
+    link: "",
+    category: "",
+    description: "Achieved Top 80 from 807 participants in the competition, showcasing innovative energy solutions."
   },
   {
     id: "cert-2",
-    title: "Meta Front-End Developer Professional Certificate",
-    image: "/assets/projects/game-engine.jpg",
-    issuer: "Coursera / Meta",
-    technologies: ["React", "JavaScript", "HTML", "CSS", "TailwindCSS"], // Menambahkan TailwindCSS
-    date: "February 2024",
-    link: "https://www.coursera.org/account/accomplishments/verify/your-meta-cert-id",
-    category: "Web Development",
-    description: "Menguasai keterampilan pengembangan front-end esensial termasuk React, JavaScript, HTML, dan CSS.",
+    title: "AIESEC Future Leaders Winter Peak 2023/2024",
+    image: "/assets/certifications/Fatra Al K AFL Sertifikat.jpg", 
+    issuer: "AIESEC",
+    technologies: [], 
+    date: "November 2023 - January 2024",
+    link: "",
+    category: "",
+    description: "Top 2 Business Cases in the AIESEC Future Leaders Winter Peak 2023/2024, showcasing innovative solutions for business growth."
   },
   {
     id: "cert-3",
-    title: "Microsoft Certified: Azure Fundamentals",
-    image: "/assets/projects/game-engine.jpg",
-    issuer: "Microsoft",
-    // Mengganti "Azure" dan "Cloud"
-    technologies: ["TypeScript"], // Contoh penyesuaian
-    date: "April 2023",
-    link: "https://learn.microsoft.com/en-us/credentials/certification/your-azure-id",
-    category: "Cloud Computing",
-    description: "Memperoleh pemahaman dasar tentang konsep cloud, layanan Azure inti, dan arsitektur cloud Microsoft.",
+    title: "Marketeers Innovation Challenge Season 1",
+    image: "/assets/certifications/Marketeers-Certificate.png", 
+    issuer: "Marketeers x Pertamina",
+    technologies: [], 
+    date: "5 July 2024",
+    link: "",
+    category: "",
+    description: "1st Runner-up in the Marketeers Innovation Challenge Season 1, showcasing innovative solutions for market penetration."
   },
   {
     id: "cert-4",
-    title: "Google Project Management Certificate",
-    image: "/assets/projects/game-engine.jpg",
-    issuer: "Coursera / Google",
-    // Mengganti "Project Management", "Agile", "Scrum"
-    technologies: ["User Research", "UI/UX Design"], // Contoh penyesuaian
-    date: "November 2023",
-    link: "https://www.coursera.org/account/accomplishments/verify/your-google-pm-cert-id",
-    category: "Project Management",
-    description: "Mengembangkan keterampilan penting dalam perencanaan, eksekusi, dan manajemen proyek.",
+    title: "Front-End Web Development",
+    image: "/assets/certifications/Sertifikat Fundamental Front-End Web Development 2021 - Fatra Al Khawarizmi.jpg", 
+    issuer: "Coding Studio",
+    technologies: [], 
+    date: "June 2025",
+    link: "",
+    category: "",
+    description: "Certified in Front-End Web Development, showcasing proficiency in HTML, CSS, and JavaScript."
+  },  
+  {
+    id: "cert-5",
+    title: "Front-End Web Development II",
+    image: "/assets/certifications/Sertifikat Fundamental Front-End Web Development II - Fatra Al Khawarizmi.jpg", 
+    issuer: "Coding Studio",
+    technologies: [], 
+    date: "June 2025",
+    link: "",
+    category: "",
+    description: "Certified in Front-End Web Development II, expanding knowledge and skillset in JavaScript frameworks and libraries. Then, Learning Bootstrap and Version Control with Git and GitHub."
   },
+  {
+    id: "cert-6",
+    title: "Fundamental Database MySql",
+    image: "/assets/certifications/Sertifikat Fundamental Database MySQL - Fatra Al Khawarizmi.jpg", 
+    issuer: "Coding Studio",
+    technologies: [], 
+    date: "June 2025",
+    link: "",
+    category: "",
+    description: "Certified in Fundamental Database MySql, expanding knowledge and skillset in Database MySql through View, Procedure and Function."
+  }
+
 ];

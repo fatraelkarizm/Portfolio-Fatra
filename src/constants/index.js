@@ -1,3 +1,4 @@
+// constants/index.js
 
 // Keyword: My Socials
 export const mySocials = [

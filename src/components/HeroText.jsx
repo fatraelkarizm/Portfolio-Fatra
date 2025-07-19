@@ -48,7 +48,7 @@ const HeroText = () => {
                          </motion.div>
 
                          <motion.p className="text-4xl font-medium 
-                    text-neutral-300"
+                         text-neutral-300"
                               variants={variants}
                               initial="hidden"
                               animate="visible"
@@ -66,26 +66,28 @@ const HeroText = () => {
                               transition={{ delay: 2.1 }}
                          >
                               <a
-                                   href="https://github.com/your-github-profile"
+                                   href="https://github.com/fatraelkarizm"
                                    target="_blank"
                                    rel="noopener noreferrer"
                                    className="flex items-center px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg shadow-lg hover:bg-purple-700 transition-colors duration-300 transform hover:scale-105"
                               >
-                                   <FaGithub className="mr-2 text-xl" />
                                    GitHub
+                                   <FaGithub className="ml-2 h-5 w-5" />
                               </a>
 
                               <a
-                                   href="/assets/your-cv-file.pdf"
+                                   href="/assets/Fatra Al Khawarizmi CV-Website.pdf"
                                    download
-                                   className="flex items-center px-6 py-3 bg-gray-700 text-white font-semibold rounded-lg shadow-lg hover:bg-gray-800 transition-colors duration-300 transform hover:scale-105"
+                                   className="flex items-center px-6 py-3 bg-indigo text-white font-semibold rounded-lg shadow-lg hover:bg-gray-700 transition-colors duration-300 transform hover:scale-105"
                               >
                                    Download CV
                                    <HiOutlineDocumentArrowDown className="ml-2 h-5 w-5" />
                               </a>
                          </motion.div>
                     </div>
+
                </div>
+
 
                {/* Mobile View */}
                <div className="flex flex-col space-y-6 md:hidden">
@@ -99,7 +101,7 @@ const HeroText = () => {
                     </motion.p>
 
                     <div>
-                         <motion.p className="text-5xl font-black text-neutral-300"
+                         <motion.p className="text-3xl font-black text-neutral-300"
                               variants={variants}
                               animate="visible"
                               initial="hidden"
@@ -115,10 +117,10 @@ const HeroText = () => {
                               transition={{ delay: 1.5 }}>
                               <FlipWords
                                    words={words}
-                                   className="font-bold text-white text-7xl" />
+                                   className="font-bold text-white text-6xl" />
                          </motion.div>
                          <motion.p
-                              className="text-4xl font-black text-neutral-300"
+                              className="text-3xl font-black text-neutral-300"
                               variants={variants}
                               animate="visible"
                               initial="hidden"
@@ -129,14 +131,14 @@ const HeroText = () => {
 
                          {/* Mobile Buttons */}
                          <motion.div
-                              className="flex flex-col gap-4 mt-8"
+                              className="flex flex-col gap-4 mt-8 w-full max-w-sm mx-auto sm:max-w-md "
                               variants={buttonVariants}
                               initial="hidden"
                               animate="visible"
                               transition={{ delay: 2.1 }}
                          >
                               <a
-                                   href="https://github.com/your-github-profile"
+                                   href="https://github.com/fatraelkarizm"
                                    target="_blank"
                                    rel="noopener noreferrer"
                                    className="flex items-center justify-center px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg shadow-lg hover:bg-purple-700 transition-colors duration-300 transform hover:scale-105"
@@ -146,9 +148,9 @@ const HeroText = () => {
                               </a>
 
                               <a
-                                   href="/assets/your-cv-file.pdf"
+                                   href="/assets/Fatra Al Khawarizmi CV-Website.pdf"
                                    download
-                                   className="flex items-center justify-center px-6 py-3 bg-gray-700 text-white font-semibold rounded-lg shadow-lg hover:bg-gray-800 transition-colors duration-300 transform hover:scale-105"
+                                   className="flex items-center justify-center px-6 py-3 bg-indigo text-white font-semibold rounded-lg shadow-lg hover:bg-gray-800 transition-colors duration-300 transform hover:scale-105"
                               >
                                    Download CV
                                    <HiOutlineDocumentArrowDown className="ml-2 h-5 w-5" />

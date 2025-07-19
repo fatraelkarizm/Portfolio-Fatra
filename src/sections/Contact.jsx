@@ -64,7 +64,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 px-4 relative bg-secondary/30">
+    <section id="contact" className="py-18 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
           Get In <span className="text-purple-600"> Touch</span>
@@ -147,7 +147,7 @@ const Contact = () => {
                 type="submit"
                 disabled={isSubmitting}
                 className={cn(
-                  "btn border-2 border-purple-600 py-3 rounded-md flex items-center justify-center gap-2 hover:bg-purple-600 transition duration-500 hover:text-white",
+                  "btn border-2 border-purple-600 py-3 rounded-md flex items-center justify-center gap-2 hover:bg-purple-600 transition duration-500 hover:text-white hover:font-bold",
                   "w-fit mx-auto",
                   "md:ml-auto md:w-full",
                   isSubmitting ? "cursor-not-allowed opacity-70" : "cursor-pointer"
@@ -165,18 +165,18 @@ const Contact = () => {
               className="w-full md:w-fit lg:w-fit"
             />
             <div className="pt-8">
-              <h4 className="font-medium mb-4 text-center"> Connect With Me</h4>
+              <h4 className="font-medium mb-4 text-center text-[18px]"> Connect With Me</h4>
               <div className="flex space-x-4 justify-center ">
                 <a href="https://www.linkedin.com/in/fatra-al-khawarizmi-bb6953280/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
                   <Linkedin />
                 </a>
-                <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-sky-500">
+                <a href="https://x.com/fatraelkarizm?t=JpX8mwb8c-uu4X7lfZxnrA&s=09" target="_blank" rel="noopener noreferrer" className="hover:text-sky-500">
                   <Twitter />
                 </a>
                 <a href="https://www.instagram.com/fatra.elkarizm/" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500">
                   <Instagram />
                 </a>
-                <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-red-500">
+                <a href="https://contacts.google.com/person/101781252283831226401?hl=in&authuser=0" target="_blank" rel="noopener noreferrer" className="hover:text-red-500">
                   <Mail />
                 </a>
               </div>

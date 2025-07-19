@@ -1,6 +1,25 @@
+// constants/achievements.js
 
 // Keyword: Achievements
 export const achievements = [
+  {
+    title: "Bronze Medal for English Education",
+    company_name: "Olimpiade Sigma Sains Nasional Indonesia", 
+    icon: "/assets/achievements/ossn-logo.png", 
+    iconBg: "#FFF",
+    date: "9 October 2022",
+    contents: [
+    ],
+  },
+  {
+    title: "Gold Medal for Mathematics",
+    company_name: "Olimpiade Sigma Sains Nasional Indonesia", 
+    icon: "/assets/achievements/ossn-logo.png", 
+    iconBg: "#FFF",
+    date: "9 October 2022",
+    contents: [
+    ],
+  },
   {
     title: "Marketeers Innovation Challenge Season 1",
     company_name: "Marketeers by Markplus and Pertamina", 
@@ -20,11 +39,24 @@ export const achievements = [
     company_name: "Pertamina",
     icon: "/assets/achievements/pertamuda-logo.png",
     iconBg: "#FFF", 
-    date: "Oktober 2024",
+    date: "17 October 2024",
     contents: [
     "Developed a framework for content creation and organized various project requirements.",
     "Conducted research correlating aviation and palm oil to propose an innovative solution called Palm Aero Fuel.",
     "Achieved Top 80 in the competition, showcasing innovative energy solutions."
     ],
-  }
+  },
+  {
+    title: "English Debate: ASIAN Parliamentary Debate POSSTER 2025",
+    company_name: "UPI",
+    icon: "/assets/achievements/Debate_English.jpg",
+    iconBg: "#FFF", 
+    date: "17 June 2025 - 21 June 2025",
+    contents: [
+      "Participated in the ASIAN Parliamentary Debate competition POSSTER UPI Cibiru Internal, representing Software Engineer 2023.",
+      "Engaged in rigorous debates on various topics, enhancing public speaking and critical thinking skills.",
+      "Collaborated with team members to develop effective arguments and rebuttals.",
+    ],
+  },
+
 ];
