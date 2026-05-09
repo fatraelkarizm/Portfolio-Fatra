@@ -202,13 +202,13 @@ export const Projects = () => {
             </button>
 
             {selectedProject.images ? (
-              <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide">
+              <div className="flex flex-col gap-4">
                 {selectedProject.images.map((img, idx) => (
                   <img
                     key={idx}
                     src={img}
                     alt={`${selectedProject.title} ${idx + 1}`}
-                    className="w-full h-auto object-cover snap-center flex-shrink-0"
+                    className="w-full h-auto object-cover rounded-lg"
                   />
                 ))}
               </div>
