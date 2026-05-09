@@ -19,9 +19,13 @@ import {
 } from 'react-icons/si';
 
 import { TbFileSpreadsheet } from "react-icons/tb";
-import { ExternalLink, Github, X, BookOpen } from 'lucide-react'; // Pastikan ini terinstal jika digunakan di proyek lain
+import { ExternalLink, Github, X, BookOpen, Bot, Cpu, LayoutDashboard } from 'lucide-react'; 
 
 export const tagIcons = {
+  // AI & Ecosystem
+  OpenClaw: { component: Bot, color: '#FF4500' },
+  'AI Agent': { component: Cpu, color: '#00FF7F' },
+  Dashboard: { component: LayoutDashboard, color: '#6A5ACD' },
 
   // Languages
   JavaScript: { component: FaJsSquare, color: '#F7DF1E' },

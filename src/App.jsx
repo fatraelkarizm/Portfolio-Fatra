@@ -19,21 +19,18 @@ const App = () => {
       {/* Navbar */}
       <Navbar />
 
-      <BrowserRouter>
-        <Routes>
-          {/* Hero Section */}
-          <Route path="/" element={<Hero />} />
-          <Route
-            path="*" 
-            element={
-              <Suspense fallback={<div className="text-center py-8">Memuat halaman 404...</div>}>
-                <Page404 />
-                
-              </Suspense>
-            }
-          />
-        </Routes>
-      </BrowserRouter>
+      <Routes>
+        {/* Hero Section */}
+        <Route path="/" element={<Hero />} />
+        <Route
+          path="*" 
+          element={
+            <Suspense fallback={<div className="text-center py-8">Memuat halaman 404...</div>}>
+              <Page404 />
+            </Suspense>
+          }
+        />
+      </Routes>
 
       <Suspense fallback={<div className="text-center py-8">Memuat bagian Tentang...</div>}>
         <About />

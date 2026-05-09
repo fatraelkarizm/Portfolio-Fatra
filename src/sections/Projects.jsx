@@ -1,5 +1,6 @@
-import { useState } from 'react';
-import { ExternalLink, Github, X, BookOpen } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
+import { ExternalLink, Github, X, BookOpen, Link as LinkIcon, Check } from 'lucide-react';
 
 import { listProjects } from '../constants/projects';
 
@@ -11,8 +12,22 @@ export const Projects = () => {
   const [activeCategory, setActiveCategory] = useState('All');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [copiedId, setCopiedId] = useState(null);
 
   const categories = ['All', 'Website', 'UI/UX', 'Terminal', 'Mobile'];
+
+  // Deep linking logic
+  useEffect(() => {
+    const projectSlug = searchParams.get('project');
+    if (projectSlug !== null) {
+      const project = listProjects.find(p => p.slug === projectSlug);
+      if (project) {
+        setSelectedProject(project);
+        setIsModalOpen(true);
+      }
+    }
+  }, [searchParams]);
 
   const filteredProjects = listProjects.filter((project) => {
     if (activeCategory === 'All') {
@@ -24,6 +39,7 @@ export const Projects = () => {
   const openModal = (project) => {
     setSelectedProject(project);
     setIsModalOpen(true);
+    setSearchParams({ project: project.slug });
     const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
     document.body.style.overflow = 'hidden';
     document.body.style.paddingRight = `${scrollBarWidth}px`;
@@ -32,8 +48,17 @@ export const Projects = () => {
   const closeModal = () => {
     setIsModalOpen(false);
     setSelectedProject(null);
+    setSearchParams({});
     document.body.style.overflow = '';
     document.body.style.paddingRight = '';
+  };
+
+  const shareProject = (e, project) => {
+    e.stopPropagation();
+    const url = `${window.location.origin}${window.location.pathname}?project=${project.slug}`;
+    navigator.clipboard.writeText(url);
+    setCopiedId(project.slug);
+    setTimeout(() => setCopiedId(null), 2000);
   };
 
   const handleOverlayClick = (e) => {
@@ -122,6 +147,13 @@ export const Projects = () => {
                           <Github size={20} />
                         </a>
                       )}
+                      <button
+                        onClick={(e) => shareProject(e, project)}
+                        className="text-foreground/80 hover:text-purple-600 transition-colors duration-300 cursor-pointer"
+                        title="Copy project link"
+                      >
+                        {copiedId === project.id ? <Check size={20} className="text-green-500" /> : <LinkIcon size={20} />}
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -169,11 +201,24 @@ export const Projects = () => {
               <X size={24} className='cursor-pointer text-purple-600' />
             </button>
 
-            <img
-              src={selectedProject.image}
-              alt={selectedProject.title}
-              className="w-full h-auto object-cover rounded-t-lg"
-            />
+            {selectedProject.images ? (
+              <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide">
+                {selectedProject.images.map((img, idx) => (
+                  <img
+                    key={idx}
+                    src={img}
+                    alt={`${selectedProject.title} ${idx + 1}`}
+                    className="w-full h-auto object-cover snap-center flex-shrink-0"
+                  />
+                ))}
+              </div>
+            ) : (
+              <img
+                src={selectedProject.image}
+                alt={selectedProject.title}
+                className="w-full h-auto object-cover rounded-t-lg"
+              />
+            )}
             <div className="p-6">
               <h3 className="text-2xl font-bold mb-2">{selectedProject.title}</h3>
               <div className="flex flex-wrap gap-2 mb-4">
@@ -215,6 +260,20 @@ export const Projects = () => {
                     <BookOpen size={18} /> Research
                   </a>
                 )}
+                <button
+                  onClick={(e) => shareProject(e, selectedProject)}
+                  className="flex items-center gap-2 px-4 py-2 bg-gray-700 text-white rounded-md hover:bg-gray-600 transition-colors duration-300 flex-grow sm:flex-grow-0 justify-center cursor-pointer"
+                >
+                  {copiedId === selectedProject.id ? (
+                    <>
+                      <Check size={18} className="text-green-500" /> Copied!
+                    </>
+                  ) : (
+                    <>
+                      <LinkIcon size={18} /> Copy Link
+                    </>
+                  )}
+                </button>
               </div>
             </div>
           </div>
