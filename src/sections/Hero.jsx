@@ -2,7 +2,6 @@ import React, { Suspense, useEffect, useState } from "react";
 import HeroText from "../components/HeroText";
 import Background from "../components/Background";
 import { useMediaQuery } from "react-responsive";
-import SectionWrapper from "../hoc/SectionWrapper";
 
 // Lazy load heavy 3D elements to avoid blocking the main thread
 const Hero3D = React.lazy(() => import("../components/Hero3D"));
@@ -50,7 +49,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="flex items-start justify-center
+    <section id="hero" className="relative flex items-start justify-center
     md:items-start md:justify-start min-h-screen overflow-hidden c-space">
       <HeroText />
       <Background />
@@ -70,4 +69,4 @@ const Hero = () => {
   )
 }
 
-export default SectionWrapper(Hero, "hero");
+export default Hero;

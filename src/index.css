@@ -175,3 +175,37 @@ body {
   opacity: 0;
   animation: heroFadeInUp 0.5s ease-out forwards;
 }
+
+@keyframes fadeInNavbar {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-navbar {
+  animation: fadeInNavbar 0.3s ease-out forwards;
+}
+
+@keyframes flipWordIn {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+  }
+}
+
+.animate-flip-word {
+  display: inline-block;
+  animation: flipWordIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+

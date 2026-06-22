@@ -1,6 +1,5 @@
-"use client";
-import React, { useCallback, useEffect, useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
+/* eslint-disable react/prop-types */
+import React, { useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge";
 
 export const FlipWords = ({
@@ -8,88 +7,30 @@ export const FlipWords = ({
   duration = 3000,
   className
 }) => {
-  const [currentWord, setCurrentWord] = useState(words[0]);
-  const [isAnimating, setIsAnimating] = useState(false);
-
-  // thanks for the fix Julian - https://github.com/Julian-AT
-  const startAnimation = useCallback(() => {
-    const word = words[words.indexOf(currentWord) + 1] || words[0];
-    setCurrentWord(word);
-    setIsAnimating(true);
-  }, [currentWord, words]);
-
+  const [wordIndex, setWordIndex] = useState(0);
   const [hasStarted, setHasStarted] = useState(false);
 
   useEffect(() => {
-    if (!isAnimating) {
-      setTimeout(() => {
-        startAnimation();
-        setHasStarted(true);
-      }, hasStarted ? duration : 5000); // Delay first flip to prevent LCP recalculation
-    }
-  }, [isAnimating, duration, startAnimation, hasStarted]);
+    const delay = hasStarted ? duration : 5000; // Delay first flip to prevent early LCP recalculation
+    const timer = setTimeout(() => {
+      setWordIndex((prev) => (prev + 1) % words.length);
+      setHasStarted(true);
+    }, delay);
+
+    return () => clearTimeout(timer);
+  }, [wordIndex, words, duration, hasStarted]);
+
+  const currentWord = words[wordIndex];
 
   return (
-    <AnimatePresence
-      initial={false}
-      onExitComplete={() => {
-        setIsAnimating(false);
-      }}>
-      <motion.div
-        initial={{
-          opacity: 0,
-          y: 10,
-        }}
-        animate={{
-          opacity: 1,
-          y: 0,
-        }}
-        transition={{
-          type: "spring",
-          stiffness: 100,
-          damping: 10,
-        }}
-        exit={{
-          opacity: 0,
-          y: -40,
-          x: 40,
-          filter: "blur(8px)",
-          scale: 2,
-          position: "absolute",
-        }}
-        className={twMerge(
-          "z-10 inline-block relative text-left",
-          className
-        )}
-        key={currentWord}>
-        {/* edit suggested by Sajal: https://x.com/DewanganSajal */}
-        {currentWord.split(" ").map((word, wordIndex) => (
-          <motion.span
-            key={word + wordIndex}
-            initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
-            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            transition={{
-              delay: wordIndex * 0.3,
-              duration: 0.3,
-            }}
-            className="inline-block whitespace-nowrap">
-            {word.split("").map((letter, letterIndex) => (
-              <motion.span
-                key={word + letterIndex}
-                initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
-                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                transition={{
-                  delay: wordIndex * 0.3 + letterIndex * 0.05,
-                  duration: 0.2,
-                }}
-                className="inline-block">
-                {letter}
-              </motion.span>
-            ))}
-            <span className="inline-block">&nbsp;</span>
-          </motion.span>
-        ))}
-      </motion.div>
-    </AnimatePresence>
+    <span
+      key={currentWord}
+      className={twMerge(
+        "z-10 inline-block animate-flip-word text-left",
+        className
+      )}
+    >
+      {currentWord}
+    </span>
   );
 };

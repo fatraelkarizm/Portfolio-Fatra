@@ -1,6 +1,6 @@
+/* eslint-disable react/prop-types */
 // src/components/Navbar.jsx
 import { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
 import { Link } from 'react-scroll';
 import { navItems } from "../constants/navItems";
 
@@ -142,17 +142,13 @@ const Navbar = () => {
                 </div>
             </div>
             {isOpen &&
-                (<motion.div className="block overflow-hidden
-                text-center sm:hidden"
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
+                (<div className="block overflow-hidden text-center sm:hidden animate-fade-in-navbar"
                     style={{ maxHeight: "100vh" }}
-                    transition={{ duration: 1 }}
                 >
                     <nav className="pb-5">
                         <Navigation activeLink={activeLink} onLinkClick={handleLinkClick} />
                     </nav>
-                </motion.div>)}
+                </div>)}
         </div>
     );
 };
