@@ -109,6 +109,7 @@ export const Projects = () => {
                   <img
                     src={project.image}
                     alt={project.title}
+                    loading="lazy"
                     className="w-full h-fit object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
@@ -208,6 +209,7 @@ export const Projects = () => {
                     key={idx}
                     src={img}
                     alt={`${selectedProject.title} ${idx + 1}`}
+                    loading="lazy"
                     className="w-full h-auto object-cover rounded-lg"
                   />
                 ))}
@@ -216,6 +218,7 @@ export const Projects = () => {
               <img
                 src={selectedProject.image}
                 alt={selectedProject.title}
+                loading="lazy"
                 className="w-full h-auto object-cover rounded-t-lg"
               />
             )}

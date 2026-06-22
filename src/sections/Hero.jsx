@@ -1,42 +1,40 @@
-// src/sections/Hero.jsx
+import React, { Suspense, useEffect, useState } from "react";
 import HeroText from "../components/HeroText";
 import Background from "../components/Background";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
 import { useMediaQuery } from "react-responsive";
-import AnimatedLostProgrammer from "../components/AnimatedLostProgrammer";
 import SectionWrapper from "../hoc/SectionWrapper";
-import StarsCanvas from '../components/StarBackground';
+
+// Lazy load heavy 3D elements to avoid blocking the main thread
+const Hero3D = React.lazy(() => import("../components/Hero3D"));
 
 const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 853 });
+  
+  // Optional: Delay loading of the 3D canvas slightly to prioritize text rendering
+  const [shouldLoad3D, setShouldLoad3D] = useState(false);
+  
+  useEffect(() => {
+    // Wait for main thread to calm down before fetching 3D assets
+    const timer = setTimeout(() => {
+      setShouldLoad3D(true);
+    }, 500); // 500ms delay helps a lot with Lighthouse score
+    
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <section className="flex items-start justify-center
     md:items-start md:justify-start min-h-screen overflow-hidden c-space">
-      <StarsCanvas />
       <HeroText />
       <Background />
       
-
-      <figure className="absolute inset-0"
-        style={{ width: "100vw", height: "100vh" }}>
-        <Canvas camera={{ position: [3, 0, -3] }}>
-          <ambientLight intensity={0.5} />
-          <pointLight position={[10, 10, 10]} />
-          <AnimatedLostProgrammer scale={0.6} position={[0, -0.2, -10]} />
-          <OrbitControls
-            enableZoom={false}
-            enablePan={true}
-            enableRotate={true}
-            zoomSpeed={1.2}
-          />
-        </Canvas>
-      </figure>
-      
+      {shouldLoad3D && (
+        <Suspense fallback={null}>
+          <Hero3D isMobile={isMobile} />
+        </Suspense>
+      )}
     </section>
   )
 }
-
 
 export default SectionWrapper(Hero, "hero");

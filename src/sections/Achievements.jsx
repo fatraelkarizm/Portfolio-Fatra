@@ -34,6 +34,7 @@ const AchievementCard = ({ achievement }) => {
             <img
               src={achievement.icon}
               alt={`${achievement.title} icon`} // Teks alternatif untuk aksesibilitas
+              loading="lazy"
               className='w-[60%] h-[60%] object-contain' // Styling ikon
             />
           )}
