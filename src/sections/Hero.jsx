@@ -43,9 +43,11 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative flex items-start justify-center md:items-start md:justify-start min-h-screen overflow-hidden c-space"
+      className="relative flex w-full items-start justify-center md:items-start md:justify-start min-h-screen overflow-hidden"
     >
-      <HeroText />
+      <div className="relative z-10 w-full max-w-7xl mx-auto c-space">
+        <HeroText />
+      </div>
       <Background />
       {StarsCanvas ? <StarsCanvas /> : null}
       {Hero3D ? <Hero3D isMobile={isMobile} /> : null}

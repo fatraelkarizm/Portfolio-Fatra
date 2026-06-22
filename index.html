@@ -59,17 +59,17 @@
       *,*::before,*::after{box-sizing:border-box}
       body{margin:0;background:#030412;color:#fff;font-family:system-ui,sans-serif}
       #root{min-height:100vh}
-      #static-shell{position:fixed;inset:0;z-index:10;pointer-events:none;font-family:system-ui,sans-serif;color:#fff;background:#030412;display:flex;align-items:flex-start;justify-content:center;padding:5rem 1.25rem 0;transition:opacity .25s ease}
+      #static-shell{position:fixed;inset:0;z-index:50;pointer-events:none;font-family:system-ui,sans-serif;color:#fff;background:transparent;display:flex;align-items:flex-start;justify-content:center;padding:5rem 1.25rem 0;transition:opacity .2s ease}
       #static-shell.is-hidden{opacity:0}
       #static-shell .hero-title{font-size:2.25rem;font-weight:500;margin-bottom:0.5rem}
       #static-shell .hero-sub{font-size:1.875rem;font-weight:900;color:#d4d4d4}
       #static-shell .hero-word{font-size:3.75rem;font-weight:700;margin:0.25rem 0}
       #static-shell .hero-desc{font-size:1rem;color:#d1d5db;margin-top:1rem;max-width:24rem}
-      @media(min-width:768px){#static-shell{align-items:flex-start;justify-content:flex-start;padding:10rem 2.5rem 0;text-align:left}#static-shell .hero-title{font-size:2.25rem}#static-shell .hero-sub{font-size:3rem}#static-shell .hero-word{font-size:6rem}#static-shell .hero-desc{font-size:1.125rem;max-width:42rem}}
+      @media(min-width:768px){#static-shell{align-items:flex-start;justify-content:flex-start;padding:10rem 2.5rem 0}#static-shell .hero-inner{text-align:left;max-width:80rem;margin:0 auto;width:100%;padding:0 2.5rem}#static-shell .hero-title{font-size:2.25rem}#static-shell .hero-sub{font-size:3rem}#static-shell .hero-word{font-size:6rem}#static-shell .hero-desc{font-size:1.125rem;max-width:42rem}}
     </style>
     <!-- Static shell for instant FCP - stays visible while React loads -->
     <div id="static-shell">
-      <div style="text-align:center">
+      <div class="hero-inner" style="text-align:center">
         <p class="hero-title">Hello, I'm Fatra</p>
         <p class="hero-sub">Software Engineer Building</p>
         <p class="hero-word">Modern</p>
