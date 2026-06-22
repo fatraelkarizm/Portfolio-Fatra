@@ -56,6 +56,9 @@
   <body>
     <!-- Critical inline CSS for instant FCP shell -->
     <style>
+      *,*::before,*::after{box-sizing:border-box}
+      body{margin:0;background:#030412;color:#fff;font-family:system-ui,sans-serif}
+      #root{min-height:100vh}
       #static-shell{position:fixed;inset:0;z-index:10;pointer-events:none;font-family:system-ui,sans-serif;color:#fff;background:#030412;display:flex;align-items:flex-start;justify-content:center;padding:5rem 1.25rem 0;transition:opacity .25s ease}
       #static-shell.is-hidden{opacity:0}
       #static-shell .hero-title{font-size:2.25rem;font-weight:500;margin-bottom:0.5rem}

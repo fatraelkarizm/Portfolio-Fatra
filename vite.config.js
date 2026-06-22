@@ -2,33 +2,34 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
-import path from 'path';
+import path from "path";
+
+const asyncCssPlugin = () => ({
+  name: "async-css",
+  transformIndexHtml: {
+    order: "post",
+    handler(html) {
+      return html.replace(
+        /<link rel="stylesheet" crossorigin href="(\/assets\/[^"]+\.css)">/,
+        '<link rel="preload" href="$1" as="style" onload="this.onload=null;this.rel=\'stylesheet\'"><noscript><link rel="stylesheet" crossorigin href="$1"></noscript>'
+      );
+    },
+  },
+});
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [react(), tailwindcss(), asyncCssPlugin()],
   resolve: {
     alias: {
-      // REKOMENDASI: '@' menunjuk ke folder 'src'
-      '@': path.resolve(__dirname, './src'),
+      "@": path.resolve(__dirname, "./src"),
     },
   },
-  // esbuild options for production minification
   esbuild: {
-    drop: ['console', 'debugger'],
+    drop: ["console", "debugger"],
   },
   build: {
     modulePreload: false,
     chunkSizeWarningLimit: 1000,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          // Separate Three.js into its own chunk so main bundle loads faster
-          'vendor-three': ['three', '@react-three/fiber', '@react-three/drei'],
-          // Separate animation libraries
-          'vendor-motion': ['motion', 'framer-motion', 'gsap'],
-        },
-      },
-    },
   },
 });

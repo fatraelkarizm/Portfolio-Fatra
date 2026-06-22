@@ -1,24 +1,30 @@
 /* eslint-disable react/prop-types */
-// src/components/Navbar.jsx
 import { useState, useEffect, useRef } from "react";
-import { Link } from 'react-scroll';
 import { navItems } from "../constants/navItems";
+
+const scrollToSection = (id) => {
+  const target = document.getElementById(id);
+  if (target) {
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+};
 
 function Navigation({ activeLink, onLinkClick }) {
     return (
         <ul className="nav-ul">
             {navItems.map((item) => (
                 <li key={item.id} className="nav-li">
-                    <Link
+                    <a
                         className={`nav-link ${activeLink === item.id ? 'text-purple-500 font-bold' : 'text-neutral-300'} hover:text-purple-500 transition-colors duration-300`}
-                        to={item.id}
                         href={`#${item.id}`}
-                        smooth={true}
-                        duration={500}
-                        onClick={() => onLinkClick(item.id)}
+                        onClick={(event) => {
+                          event.preventDefault();
+                          onLinkClick(item.id);
+                          scrollToSection(item.id);
+                        }}
                     >
                         {item.title}
-                    </Link>
+                    </a>
                 </li>
             ))}
         </ul>
@@ -124,7 +130,11 @@ const Navbar = () => {
                 <div className="flex items-center justify-between py-2 sm:py-0">
                     <a href="/"
                         className="text-xl font-bold transition-colors text-neutral-300 hover:text-purple-500"
-                        onClick={() => handleLinkClick('hero')}
+                        onClick={(event) => {
+                          event.preventDefault();
+                          handleLinkClick('hero');
+                          scrollToSection('hero');
+                        }}
                     >
                         Fatra
                     </a>
