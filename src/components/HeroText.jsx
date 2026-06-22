@@ -30,7 +30,7 @@ const HeroText = () => {
 
                          <div className="hero-fade-in" style={{ animationDelay: '0.2s' }}>
                               <FlipWords words={words}
-                                   className="font-black text-white text-8xl" />
+                                   className="font-semibold text-white text-8xl" />
                          </div>
 
                          <p className="text-4xl font-medium text-neutral-300 hero-fade-in" style={{ animationDelay: '0.25s' }}
@@ -45,7 +45,7 @@ const HeroText = () => {
 
                          {/* Desktop Buttons */}
                          <div
-                              className="flex flex-row gap-4 mt-16 hero-fade-in-up"
+                              className="flex flex-row gap-4 mt-16 hero-fade-in"
                               style={{ animationDelay: '0.35s' }}
                          >
                               <a
@@ -80,7 +80,7 @@ const HeroText = () => {
                     </p>
 
                     <div>
-                         <p className="text-3xl font-black text-neutral-300 hero-fade-in" style={{ animationDelay: '0.15s' }}
+                         <p className="text-3xl font-medium text-neutral-300 hero-fade-in" style={{ animationDelay: '0.15s' }}
                          >
                               Software Engineer Building
                          </p>
@@ -88,10 +88,10 @@ const HeroText = () => {
                          <div className="hero-fade-in" style={{ animationDelay: '0.2s' }}>
                               <FlipWords
                                    words={words}
-                                   className="font-bold text-white text-6xl" />
+                                   className="font-semibold text-white text-6xl" />
                          </div>
                          <p
-                              className="text-3xl font-black text-neutral-300 hero-fade-in"
+                              className="text-3xl font-medium text-neutral-300 hero-fade-in"
                               style={{ animationDelay: '0.25s' }}
                          >
                               Business Solutions
@@ -104,7 +104,7 @@ const HeroText = () => {
 
                          {/* Mobile Buttons */}
                          <div
-                              className="flex flex-col gap-4 mt-8 w-full max-w-sm mx-auto sm:max-w-md hero-fade-in-up"
+                              className="flex flex-col gap-4 mt-8 w-full max-w-sm mx-auto sm:max-w-md hero-fade-in"
                               style={{ animationDelay: '0.35s' }}
                          >
                               <a

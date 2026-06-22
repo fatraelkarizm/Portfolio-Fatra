@@ -145,38 +145,26 @@ body {
   contain-intrinsic-size: auto 1200px;
 }
 
-/* Hero text CSS animations - replaces motion.js for above-the-fold content */
+/* Hero text CSS animations */
 @keyframes heroFadeIn {
   from {
-    transform: translateX(-30px);
+    opacity: 0;
   }
   to {
-    transform: translateX(0);
-  }
-}
-
-@keyframes heroFadeInUp {
-  from {
-    transform: translateY(15px);
-  }
-  to {
-    transform: translateY(0);
+    opacity: 1;
   }
 }
 
 .hero-fade-in {
-  animation: heroFadeIn 0.5s ease-out forwards;
-}
-
-.hero-fade-in-up {
-  animation: heroFadeInUp 0.5s ease-out forwards;
+  opacity: 0;
+  animation: heroFadeIn 0.45s ease-out forwards;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .hero-fade-in,
-  .hero-fade-in-up,
   .animate-flip-word {
     animation: none;
+    opacity: 1;
   }
 }
 
@@ -196,16 +184,16 @@ body {
 }
 
 @keyframes flipWordIn {
-  0% {
-    transform: translateY(15px);
+  from {
+    opacity: 0;
   }
-  100% {
-    transform: translateY(0);
+  to {
+    opacity: 1;
   }
 }
 
 .animate-flip-word {
   display: inline-block;
-  animation: flipWordIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: flipWordIn 0.35s ease-out forwards;
 }
 
