@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://robohash.org" />
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript>
       <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet" />
@@ -54,7 +53,27 @@
     </script>
   </head>
   <body>
-    <div id="root"></div>
+    <!-- Critical inline CSS for instant FCP shell -->
+    <style>
+      #static-shell{font-family:'Funnel Display',system-ui,sans-serif;color:#fff;background:#030412;min-height:100vh;display:flex;align-items:flex-start;justify-content:center;padding:5rem 1.25rem 0}
+      #static-shell .hero-title{font-size:2.25rem;font-weight:500;margin-bottom:0.5rem}
+      #static-shell .hero-sub{font-size:1.875rem;font-weight:900;color:#d4d4d4}
+      #static-shell .hero-word{font-size:3.75rem;font-weight:700;margin:0.25rem 0}
+      #static-shell .hero-desc{font-size:1rem;color:#a3a3a3;margin-top:1rem;max-width:24rem}
+      @media(min-width:768px){#static-shell{align-items:flex-start;justify-content:flex-start;padding:10rem 2.5rem 0;text-align:left}#static-shell .hero-title{font-size:2.25rem}#static-shell .hero-sub{font-size:3rem}#static-shell .hero-word{font-size:6rem}#static-shell .hero-desc{font-size:1.125rem;max-width:42rem}}
+    </style>
+    <div id="root">
+      <!-- Static shell for instant FCP - replaced by React on hydration -->
+      <div id="static-shell">
+        <div style="text-align:center">
+          <p class="hero-title">Hello, I'm Fatra</p>
+          <p class="hero-sub">Software Engineer Building</p>
+          <p class="hero-word">Modern</p>
+          <p class="hero-sub">Business Solutions</p>
+          <p class="hero-desc">I specialize in building scalable, intelligent, and user-centric applications using modern web technologies and AI integration.</p>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
