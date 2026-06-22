@@ -14,6 +14,14 @@ const Footer = React.lazy(() => import("./sections/Footer.jsx"));
 const Page404 = React.lazy(() => import("./sections/Page404.jsx"));
 
 const App = () => {
+  React.useEffect(() => {
+    // Remove the static FCP shell once React has mounted
+    const shell = document.getElementById('static-shell');
+    if (shell) {
+      shell.style.display = 'none';
+    }
+  }, []);
+
   return (
     <div className="container mx-auto max-w-7xl">
       {/* Navbar */}

@@ -18,15 +18,20 @@ export const FlipWords = ({
     setIsAnimating(true);
   }, [currentWord, words]);
 
+  const [hasStarted, setHasStarted] = useState(false);
+
   useEffect(() => {
-    if (!isAnimating)
+    if (!isAnimating) {
       setTimeout(() => {
         startAnimation();
-      }, duration);
-  }, [isAnimating, duration, startAnimation]);
+        setHasStarted(true);
+      }, hasStarted ? duration : 5000); // Delay first flip to prevent LCP recalculation
+    }
+  }, [isAnimating, duration, startAnimation, hasStarted]);
 
   return (
     <AnimatePresence
+      initial={false}
       onExitComplete={() => {
         setIsAnimating(false);
       }}>
