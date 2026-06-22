@@ -34,7 +34,7 @@ const HeroText = () => {
                               initial="hidden"
                               animate="visible"
                               transition={{ delay: 1.2 }}
-                         >A Frontend Developer Building
+                         >A Software Engineer Building
                          </motion.p>
 
                          <motion.div
@@ -54,7 +54,7 @@ const HeroText = () => {
                               animate="visible"
                               transition={{ delay: 1.8 }}
                          >
-                              Web Solutions
+                              Business Solutions
                          </motion.p>
 
                          {/* Desktop Buttons */}
@@ -107,7 +107,7 @@ const HeroText = () => {
                               initial="hidden"
                               transition={{ delay: 1.2 }}
                          >
-                              Frontend Developer Building
+                              Software Engineer Building
                          </motion.p>
 
                          <motion.div
@@ -126,7 +126,7 @@ const HeroText = () => {
                               initial="hidden"
                               transition={{ delay: 1.8 }}
                          >
-                              Web Applications
+                              Business Solutions
                          </motion.p>
 
                          {/* Mobile Buttons */}
