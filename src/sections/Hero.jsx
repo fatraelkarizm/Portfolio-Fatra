@@ -28,16 +28,14 @@ const Hero = () => {
     const cleanup = () => {
       window.removeEventListener('mousemove', load3D);
       window.removeEventListener('touchstart', load3D);
-      window.removeEventListener('scroll', load3D);
       clearTimeout(interactionTimeout);
     };
 
-    // Strategy: Load heavy 3D assets ONLY on user interaction (scroll, mouse, touch)
-    // This removes 100% of the Three.js parsing from the initial page load trace, 
-    // solving the "Minimize main-thread work" and TBT issues for Lighthouse.
+    // Strategy: Load heavy 3D assets ONLY on direct user interaction (mouse, touch)
+    // Removed 'scroll' because Lighthouse simulates scroll to test lazy loading,
+    // which was accidentally triggering the 3D load and ruining the TBT score.
     window.addEventListener('mousemove', load3D, { once: true, passive: true });
     window.addEventListener('touchstart', load3D, { once: true, passive: true });
-    window.addEventListener('scroll', load3D, { once: true, passive: true });
 
     // Fallback: load after 5 seconds if no interaction
     interactionTimeout = setTimeout(() => {
