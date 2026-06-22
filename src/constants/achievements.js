@@ -19,7 +19,7 @@ export const achievements = [
     iconBg: "#FFF",
     date: "2026",
     contents: [
-      "Awarded 1st Place Outstanding Student Award at the Faculty of UPI Cibiru Campus.",
+      "Awarded 1st Place Outstanding Student Award as a Software Engineer Student.",
     ],
   },
   {
@@ -109,11 +109,11 @@ export const achievements = [
   {
     title: "English Debate: ASIAN Parliamentary Debate POSSTER 2025",
     company_name: "UPI",
-    icon: "/assets/achievements/Debate_English.jpg",
+    icon: "",
     iconBg: "#FFF", 
     date: "17 June 2025 - 21 June 2025",
     contents: [
-      "Participated in the ASIAN Parliamentary Debate competition POSSTER UPI Cibiru Internal, representing Software Engineer 2023.",
+      "Participated in the ASIAN Parliamentary Debate competition POSSTER Software Engineer Internal, representing Software Engineer 2023.",
       "Engaged in rigorous debates on various topics, enhancing public speaking and critical thinking skills.",
       "Collaborated with team members to develop effective arguments and rebuttals.",
     ],

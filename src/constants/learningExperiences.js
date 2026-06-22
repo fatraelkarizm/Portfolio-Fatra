@@ -4,8 +4,8 @@ export const learningExperiences = [
   {
     title: "IT Business Analyst",
     company_name: "PT YAIJ Solusi Internasional",
-    icon: "/assets/company/abc_logo.png", // fallback logo
-    iconBg: "#383E56",
+    icon: "", 
+    iconBg: "#FFF",
     date: "December 2025 - Present",
     contents: [
       "Led end-to-end development of YAIJ: Cek Karir, generating 200+ qualified leads and attracting 3,000+ visitors during launch.",
@@ -17,8 +17,8 @@ export const learningExperiences = [
   {
     title: "Frontend Developer (Intern)",
     company_name: "Human Centric Research Center Telkom University",
-    icon: "/assets/company/abc_logo.png", // fallback logo
-    iconBg: "#E6DEDD",
+    icon: "", 
+    iconBg: "#FFF",
     date: "September 2025 - January 2026",
     contents: [
       "Developed dynamic conferencing applications with multi-role users, helping to simplify content creation with a 40% improvement.",
@@ -28,8 +28,8 @@ export const learningExperiences = [
   {
     title: "Assistant Lecturer | MySQL (DDL, DML)",
     company_name: "Universitas Pendidikan Indonesia",
-    icon: "/assets/company/abc_logo.png", // fallback logo
-    iconBg: "#383E56",
+    icon: "", 
+    iconBg: "#FFF",
     date: "September 2025 - January 2026",
     contents: [
       "Assisted lecturers in teaching Database Modeling, Basic Programming, and Software Design & Specification courses for 90+ students.",
@@ -38,8 +38,8 @@ export const learningExperiences = [
   {
     title: "Founder (Fullstack Developer, IT Business Analyst)",
     company_name: "GABOOTHZ: Gallery Photobooth",
-    icon: "/assets/company/abc_logo.png", // fallback logo
-    iconBg: "#E6DEDD",
+    icon: "", 
+    iconBg: "#FFF",
     date: "February 2025 - Present",
     contents: [
       "Collaborated with 5+ stakeholders to deliver a seamless digital photobooth experience.",

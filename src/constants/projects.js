@@ -103,5 +103,31 @@ export const listProjects = [
     tags: ['Figma'],
     category: 'UI/UX',
   },
+  {
+    id: 10,
+    slug: 'fraud-detection-signalshield',
+    title: 'Fraud Detection System: SignalShield',
+    description: 'Developed and deployed a production-grade fraud detection platform used by a payment gateway company, leveraging Graph Analytics, Machine Learning, and Rule-Based Detection for real-time transaction monitoring and fraud prevention. Engineered 30+ rules (4-layer detection), achieving 95% money mule detection rate.',
+    image: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAwMCAO+ip1sAAAAASUVORK5CYII=',
+    tags: ['Machine Learning', 'Graph Analytics', 'AI'],
+    category: 'Website',
+  },
+  {
+    id: 11,
+    slug: 'judgechain',
+    title: 'JudgeChain',
+    description: 'Developed 100+ autonomous AI agents with public, trader, and narrative enthusiast persona for decentralized decision-making and on-chain debate analysis on Solana, contributing to a Top 6 Global and Top 1 Asia finish at the Dev3Pack International Hackathon.',
+    image: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAwMCAO+ip1sAAAAASUVORK5CYII=',
+    tags: ['Solana', 'AI Agent', 'Web3'],
+    category: 'Website',
+  },
+  {
+    id: 12,
+    slug: 'samsung-health-guard',
+    title: 'Samsung Health Guard',
+    description: 'Developed an inclusive mobile health application promoting sports accessibility for women and persons with disabilities, aligned with SDG 3 (Good Health and Well-being) and SDG 10 (Reduced Inequalities) as part of Top 40 Samsung Solve for Tomorrow.',
+    image: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAwMCAO+ip1sAAAAASUVORK5CYII=',
+    tags: ['Mobile', 'Health', 'SDG'],
+    category: 'Mobile',
+  },
 ];
-
