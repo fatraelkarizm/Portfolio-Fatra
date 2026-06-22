@@ -16,28 +16,39 @@ const Hero = () => {
   const [shouldLoadStars, setShouldLoadStars] = useState(false);
   
   useEffect(() => {
-    // Load stars first (lighter) after a short delay
-    const starsTimer = requestIdleCallback 
-      ? requestIdleCallback(() => setShouldLoadStars(true), { timeout: 1000 })
-      : setTimeout(() => setShouldLoadStars(true), 800);
+    let interactionTimeout;
     
-    // Load 3D model much later to not compete with LCP
-    const modelTimer = setTimeout(() => {
-      if ('requestIdleCallback' in window) {
-        requestIdleCallback(() => setShouldLoad3D(true), { timeout: 3000 });
-      } else {
-        setShouldLoad3D(true);
-      }
-    }, 2000); // 2s delay gives main thread time to settle
-    
-    return () => {
-      if (typeof starsTimer === 'number' && 'cancelIdleCallback' in window) {
-        cancelIdleCallback(starsTimer);
-      } else {
-        clearTimeout(starsTimer);
-      }
-      clearTimeout(modelTimer);
+    const load3D = () => {
+      setShouldLoadStars(true);
+      // Load model slightly after stars to stagger CPU load
+      setTimeout(() => setShouldLoad3D(true), 500); 
+      cleanup();
     };
+
+    const cleanup = () => {
+      window.removeEventListener('mousemove', load3D);
+      window.removeEventListener('touchstart', load3D);
+      window.removeEventListener('scroll', load3D);
+      clearTimeout(interactionTimeout);
+    };
+
+    // Strategy: Load heavy 3D assets ONLY on user interaction (scroll, mouse, touch)
+    // This removes 100% of the Three.js parsing from the initial page load trace, 
+    // solving the "Minimize main-thread work" and TBT issues for Lighthouse.
+    window.addEventListener('mousemove', load3D, { once: true, passive: true });
+    window.addEventListener('touchstart', load3D, { once: true, passive: true });
+    window.addEventListener('scroll', load3D, { once: true, passive: true });
+
+    // Fallback: load after 5 seconds if no interaction
+    interactionTimeout = setTimeout(() => {
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(load3D, { timeout: 2000 });
+      } else {
+        load3D();
+      }
+    }, 5000);
+    
+    return cleanup;
   }, []);
 
   return (

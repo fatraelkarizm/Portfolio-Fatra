@@ -39,6 +39,8 @@ export const ServiceCard = ({ index, title, icon, onClick }) => (
           width="128"
           height="128"
           className='w-32 h-32 object-contain'
+          loading="lazy"
+          decoding="async"
         />
         <h3
           className='text-white text-lg sm:text-[20px] font-bold text-center'
