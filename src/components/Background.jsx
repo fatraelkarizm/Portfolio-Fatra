@@ -4,7 +4,7 @@ const Background = () => {
           <div className="relative h-screen overflow-y-hidden">
                <div className="absolute inset-0 w-full h-screen -z-50"
                style={{
-                    backgroundImage: "url(/assets/herobg.png)",
+                    backgroundImage: "url(/assets/herobg.webp)",
                     backgroundPosition: "bottom",
                     backgroundSize: "cover",
                }}

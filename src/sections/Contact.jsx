@@ -160,7 +160,7 @@ const Contact = () => {
           </div>
           <div>
             <img
-              src="/assets/coding-pov.png"
+              src="/assets/coding-pov.webp"
               alt="coding"
               className="w-full md:w-fit lg:w-fit"
             />
