@@ -15,11 +15,20 @@ const Page404 = React.lazy(() => import("./sections/Page404.jsx"));
 
 const App = () => {
   React.useEffect(() => {
-    // Remove the static FCP shell once React has mounted
     const shell = document.getElementById('static-shell');
-    if (shell) {
-      shell.style.display = 'none';
-    }
+    if (!shell) return;
+
+    // Wait for React hero to paint, then fade out the fixed overlay (avoids ~1.0 CLS)
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        shell.classList.add('is-hidden');
+        shell.addEventListener(
+          'transitionend',
+          () => shell.remove(),
+          { once: true }
+        );
+      });
+    });
   }, []);
 
   return (

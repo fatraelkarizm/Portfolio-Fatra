@@ -21,16 +21,23 @@ export const FlipWords = ({
   }, [wordIndex, words, duration, hasStarted]);
 
   const currentWord = words[wordIndex];
+  const longestWord = words.reduce((a, b) => (a.length >= b.length ? a : b), '');
 
   return (
     <span
-      key={currentWord}
-      className={twMerge(
-        "z-10 inline-block animate-flip-word text-left",
-        className
-      )}
+      className="inline-block text-left"
+      style={{ minWidth: `${longestWord.length}ch` }}
+      aria-live="polite"
     >
-      {currentWord}
+      <span
+        key={currentWord}
+        className={twMerge(
+          "z-10 inline-block animate-flip-word text-left",
+          className
+        )}
+      >
+        {currentWord}
+      </span>
     </span>
   );
 };

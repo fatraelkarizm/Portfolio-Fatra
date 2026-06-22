@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="preload" href="/assets/herobg.webp" as="image" type="image/webp" fetchpriority="high" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=optional" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript>
-      <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=optional" rel="stylesheet" />
     </noscript>
     <title>Fatra Al Khawarizmi's Portfolio | Software Engineer & IT Business Analyst</title>
     
@@ -55,7 +56,8 @@
   <body>
     <!-- Critical inline CSS for instant FCP shell -->
     <style>
-      #static-shell{font-family:'Funnel Display',system-ui,sans-serif;color:#fff;background:#030412;min-height:100vh;display:flex;align-items:flex-start;justify-content:center;padding:5rem 1.25rem 0}
+      #static-shell{position:fixed;inset:0;z-index:40;pointer-events:none;font-family:system-ui,sans-serif;color:#fff;background:#030412;display:flex;align-items:flex-start;justify-content:center;padding:5rem 1.25rem 0;transition:opacity .25s ease}
+      #static-shell.is-hidden{opacity:0}
       #static-shell .hero-title{font-size:2.25rem;font-weight:500;margin-bottom:0.5rem}
       #static-shell .hero-sub{font-size:1.875rem;font-weight:900;color:#d4d4d4}
       #static-shell .hero-word{font-size:3.75rem;font-weight:700;margin:0.25rem 0}
