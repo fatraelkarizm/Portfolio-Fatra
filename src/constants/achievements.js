@@ -5,7 +5,7 @@ export const achievements = [
   {
     title: "Top 6 Global & Top 1 Asia Dev3Pack International Hackathon",
     company_name: "Dev3Pack", 
-    icon: "/assets/achievements/ossn-logo.png", // fallback icon
+    icon: "", 
     iconBg: "#FFF",
     date: "2026",
     contents: [
@@ -14,8 +14,8 @@ export const achievements = [
   },
   {
     title: "1st Place Outstanding Student Award",
-    company_name: "Faculty of UPI Cibiru Campus", 
-    icon: "/assets/achievements/ossn-logo.png", // fallback icon
+    company_name: "Software Engineer Student", 
+    icon: "", 
     iconBg: "#FFF",
     date: "2026",
     contents: [
@@ -25,7 +25,7 @@ export const achievements = [
   {
     title: "Fully Funded Delegate ASEAN Youth Conference Malaysia 2025",
     company_name: "ASEAN Youth Conference", 
-    icon: "/assets/achievements/marketeers-logo.png", // fallback icon
+    icon: "", 
     iconBg: "#FFF",
     date: "2025",
     contents: [
@@ -35,7 +35,7 @@ export const achievements = [
   {
     title: "Most Outstanding Scholar",
     company_name: "ASEAN Youth Organization Academy",
-    icon: "/assets/achievements/pertamuda-logo.png", // fallback icon
+    icon: "", 
     iconBg: "#FFF", 
     date: "2025",
     contents: [
@@ -59,7 +59,7 @@ export const achievements = [
   {
     title: "1st Place UI/UX Design Competition",
     company_name: "Itenas Digital Transformation Competition",
-    icon: "/assets/achievements/ossn-logo.png", // fallback icon
+    icon: "", 
     iconBg: "#FFF", 
     date: "2025",
     contents: [
@@ -69,7 +69,7 @@ export const achievements = [
   {
     title: "3rd Place Incremental Business Plan Competition",
     company_name: "Incremental Business Plan Competition",
-    icon: "/assets/achievements/ossn-logo.png", // fallback icon
+    icon: "", 
     iconBg: "#FFF", 
     date: "2025",
     contents: [
