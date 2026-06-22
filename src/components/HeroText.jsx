@@ -76,7 +76,7 @@ const HeroText = () => {
                               </a>
 
                               <a
-                                   href="/assets/Fatra Al Khawarizmi CV-Website.pdf"
+                                   href="/assets/CV_Fatra_Al_Khawarizmi.pdf"
                                    download
                                    className="flex items-center px-6 py-3 bg-indigo text-white font-semibold rounded-lg shadow-lg hover:bg-gray-700 transition-colors duration-300 transform hover:scale-105"
                               >
@@ -148,7 +148,7 @@ const HeroText = () => {
                               </a>
 
                               <a
-                                   href="/assets/Fatra Al Khawarizmi CV-Website.pdf"
+                                   href="/assets/CV_Fatra_Al_Khawarizmi.pdf"
                                    download
                                    className="flex items-center justify-center px-6 py-3 bg-indigo text-white font-semibold rounded-lg shadow-lg hover:bg-gray-800 transition-colors duration-300 transform hover:scale-105"
                               >

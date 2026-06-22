@@ -3,57 +3,53 @@
 // Keyword: Experiences
 export const experiences = [
   {
-    title: "Software Developer",
-    job: "Security & Defense Projects", // Kamu menggunakan 'job' di komponen
-    company_name: "PT. XYZ Technology", // <-- Tambahkan ini
-    icon: "./public/assets/coding-pov.png", // <-- Tambahkan ini
+    title: "IT Business Analyst",
+    job: "Fulltime Remote",
+    company_name: "PT YAIJ Solusi Internasional",
+    icon: "/assets/company/abc_logo.png", // fallback logo
     iconBg: "#383E56",
+    date: "December 2025 - Present",
     contents: [
-      "Enhanced application security and developed new features, adhering to standards set by the Passive Defense Organization and National Cyberspace Center.",
-      "Designed and implemented intuitive map interfaces using MapsUI, enhancing user experience and enabling seamless interactive map integration.",
-      "Developed applications for industrial automation, leveraging C++ and the Fatek API for PLC communication.",
-      "Enhanced responsiveness and usability of applications using Windows Forms and WPF frameworks.",
-      "Executed XML to SVG conversions using X-DOM, ensuring dynamic and efficient data visualization.",
+      "Led end-to-end development of YAIJ: Cek Karir, generating 200+ qualified leads and attracting 3,000+ visitors during launch.",
+      "Architected an enterprise management platform spanning 8+ operational modules, 9 user roles, and 4 external integrations, streamlining workflows across multiple business functions.",
+      "Partnered with the Project Manager to translate business requirements into scalable technical solutions, reducing data processing and content production time by ~60% through automation, centralized data architecture, and workflow optimization.",
+      "Established a containerized CI/CD infrastructure with GitHub Actions, Docker, and VPS deployment, supported by 90+ automated tests to ensure application quality and deployment consistency.",
     ],
   },
   {
-    title: "Back-End Developer",
-    job: "Car Manufacture",
-    company_name: "PT. ABC Otomotif", // <-- Tambahkan ini
-    icon: "/assets/company/abc_logo.png", // <-- Tambahkan ini
+    title: "Frontend Developer",
+    job: "Intern",
+    company_name: "Human Centric Research Center Telkom University",
+    icon: "/assets/company/abc_logo.png", // fallback logo
     iconBg: "#E6DEDD",
-    date: "2023-2024",
+    date: "September 2025 - January 2026",
     contents: [
-      "Engineered systems for large-scale data ingestion and analysis, ensuring efficient data processing and storage.",
-      "Developed back-end systems enabling vehicle-to-cloud communication for telemetry, diagnostics, and remote control:",
-      "Implemented secure APIs, following ISO 26262 automotive safety standards.",
-      "Ensured data privacy for customers and partners through industry-compliant protocols.",
-      "Delivered remote features like over-the-air updates, real-time tracking, and remote start capabilities.",
+      "Developed dynamic conferencing applications with multi-role users, helping to simplify content creation with a 40% improvement.",
+      "Contributed to a research-based application registered as Intellectual Property (HKI), ensuring originality and legal protection of the developed system.",
     ],
   },
   {
-    title: "Freelance Developer",
-    job: "Self-Employed",
-    company_name: "Freelance", // <-- Tambahkan ini
-    icon: "/assets/company/freelance_logo.png", // <-- Tambahkan ini
-    iconBg: "#A2A2A2",
-    date: "2025-Present",
+    title: "Assistant Lecturer | MySQL (DDL, DML)",
+    job: "Assistant Lecturer",
+    company_name: "Universitas Pendidikan Indonesia",
+    icon: "/assets/company/abc_logo.png", // fallback logo
+    iconBg: "#383E56",
+    date: "September 2025 - January 2026",
     contents: [
-      "Created a personal portfolio using Three.js, React, Vite, and WebAPI to showcase technical expertise.",
-      "Continuously enhancing technical skills and expanding expertise in modern web development and back-end technologies.",
+      "Assisted lecturers in teaching Database Modeling, Basic Programming, and Software Design & Specification courses for 90+ students.",
     ],
   },
-  ,
   {
-    title: "Freelance Developer",
-    job: "Self-Employed",
-    company_name: "Freelance", 
-    icon: "/assets/company/freelance_logo.png",
-    iconBg: "#A2A2A2",
-    date: "2025-Present",
+    title: "Founder (Fullstack Developer, IT Business Analyst)",
+    job: "Founder",
+    company_name: "GABOOTHZ: Gallery Photobooth",
+    icon: "/assets/company/abc_logo.png", // fallback logo
+    iconBg: "#E6DEDD",
+    date: "February 2025 - Present",
     contents: [
-      "Created a personal portfolio using Three.js, React, Vite, and WebAPI to showcase technical expertise.",
-      "Continuously enhancing technical skills and expanding expertise in modern web development and back-end technologies.",
+      "Collaborated with 5+ stakeholders to deliver a seamless digital photobooth experience.",
+      "Collaborated with 3 people to build Gaboothz and Generated more than IDR 10 million in revenue through commercial photobooth services.",
+      "Selected as a finalist in UPI Edupreneur Academy's Business Entrepreneurship Program.",
     ],
   },
 ];
