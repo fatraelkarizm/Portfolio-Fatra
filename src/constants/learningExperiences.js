@@ -101,7 +101,7 @@ export const learningExperiences = [
   {
     title: "MySQL Database Management",
     company_name: "College Material",
-    icon: "/assets/logos/logo-mysql.png",
+    icon: "/assets/logos/logo-mysql.webp",
     iconBg: "#000000",
     date: "September 2024 - Present",
     contents: [

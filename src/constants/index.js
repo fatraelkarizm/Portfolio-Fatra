@@ -24,19 +24,19 @@ export const services = [
   
   {
     title: "Coding Journey",
-    icon: "/assets/logos/web-developer.png",
+    icon: "/assets/logos/web-developer.webp",
   },
   {
     title: "Organizational Experiences",
-    icon: "/assets/logos/logo-community.png",
+    icon: "/assets/logos/logo-community.webp",
   },
   {
     title: "Achievements",
-    icon: "/assets/logos/achievement.png",
+    icon: "/assets/logos/achievement.webp",
   },
   {
     title: "Certifications",
-    icon: "/assets/logos/certifications.png",
+    icon: "/assets/logos/certifications.webp",
   },
 ];
 
