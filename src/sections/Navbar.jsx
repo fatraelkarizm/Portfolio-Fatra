@@ -12,6 +12,7 @@ function Navigation({ activeLink, onLinkClick }) {
                     <Link
                         className={`nav-link ${activeLink === item.id ? 'text-purple-600 font-bold' : 'text-neutral-400'} hover:text-purple-600 transition-colors duration-300`}
                         to={item.id}
+                        href={`#${item.id}`}
                         smooth={true}
                         duration={500}
                         onClick={() => onLinkClick(item.id)}

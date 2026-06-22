@@ -134,6 +134,7 @@ export const Projects = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-foreground/80 hover:text-purple-600 transition-colors duration-300"
+                          aria-label={`View live demo of ${project.title}`}
                         >
                           <ExternalLink size={20} />
                         </a>
@@ -144,6 +145,7 @@ export const Projects = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-foreground/80 hover:text-purple-600 transition-colors duration-300"
+                          aria-label={`View GitHub repository of ${project.title}`}
                         >
                           <Github size={20} />
                         </a>
@@ -152,6 +154,7 @@ export const Projects = () => {
                         onClick={(e) => shareProject(e, project)}
                         className="text-foreground/80 hover:text-purple-600 transition-colors duration-300 cursor-pointer"
                         title="Copy project link"
+                        aria-label={`Copy link to project ${project.title}`}
                       >
                         {copiedId === project.id ? <Check size={20} className="text-green-500" /> : <LinkIcon size={20} />}
                       </button>
@@ -198,6 +201,7 @@ export const Projects = () => {
             <button
               onClick={closeModal}
               className="absolute top-4 right-4 text-muted-foreground hover:text-foreground transition-colors duration-300 z-10"
+              aria-label="Close modal"
             >
               <X size={24} className='cursor-pointer text-purple-600' />
             </button>

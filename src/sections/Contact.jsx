@@ -167,16 +167,16 @@ const Contact = () => {
             <div className="pt-8">
               <h4 className="font-medium mb-4 text-center text-[18px]"> Connect With Me</h4>
               <div className="flex space-x-4 justify-center ">
-                <a href="https://www.linkedin.com/in/fatra-al-khawarizmi-bb6953280/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
+                <a href="https://www.linkedin.com/in/fatra-al-khawarizmi-bb6953280/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500" aria-label="LinkedIn Profile">
                   <Linkedin />
                 </a>
-                <a href="https://x.com/fatraelkarizm?t=JpX8mwb8c-uu4X7lfZxnrA&s=09" target="_blank" rel="noopener noreferrer" className="hover:text-sky-500">
+                <a href="https://x.com/fatraelkarizm?t=JpX8mwb8c-uu4X7lfZxnrA&s=09" target="_blank" rel="noopener noreferrer" className="hover:text-sky-500" aria-label="Twitter Profile">
                   <Twitter />
                 </a>
-                <a href="https://www.instagram.com/fatra.elkarizm/" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500">
+                <a href="https://www.instagram.com/fatra.elkarizm/" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500" aria-label="Instagram Profile">
                   <Instagram />
                 </a>
-                <a href="https://contacts.google.com/person/101781252283831226401?hl=in&authuser=0" target="_blank" rel="noopener noreferrer" className="hover:text-red-500">
+                <a href="https://contacts.google.com/person/101781252283831226401?hl=in&authuser=0" target="_blank" rel="noopener noreferrer" className="hover:text-red-500" aria-label="Email Contact">
                   <Mail />
                 </a>
               </div>

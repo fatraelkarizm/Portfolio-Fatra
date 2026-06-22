@@ -6,7 +6,7 @@ export const TechBadge = ({ tech }) => {
 
   return (
     <span className="inline-flex items-center border-2 rounded-full px-3 py-1 text-xs font-semibold text-gray-200 mr-2 mb-2">
-      {IconComponent && <IconComponent style={{ color: iconColor }} className="mr-1" size={16}/>}
+      {IconComponent && <IconComponent style={{ color: iconColor }} className="mr-1" size={16} aria-label={`${tech} Icon`}/>}
       {tech}
     </span>
   );
