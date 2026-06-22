@@ -53,7 +53,7 @@ const About = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-4 text-secondary text-[16px] leading-[30px] text-justify'
         >
-          I'm a software developer, focusing on <b className="text-purple-600 font-extrabold">Front-End Web Development</b>, specializing in {' '}
+          I'm a software developer, focusing on <b className="text-purple-400 font-extrabold">Front-End Web Development</b>, specializing in {' '}
           <TechBadge tech="HTML" />
           <TechBadge tech="CSS" />
           and {' '}

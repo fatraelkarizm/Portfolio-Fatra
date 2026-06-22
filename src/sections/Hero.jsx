@@ -15,37 +15,20 @@ const Hero = () => {
   const [shouldLoadStars, setShouldLoadStars] = useState(false);
   
   useEffect(() => {
-    let interactionTimeout;
-    
     const load3D = () => {
       setShouldLoadStars(true);
-      // Load model slightly after stars to stagger CPU load
-      setTimeout(() => setShouldLoad3D(true), 500); 
-      cleanup();
-    };
-
-    const cleanup = () => {
+      setTimeout(() => setShouldLoad3D(true), 500);
       window.removeEventListener('mousemove', load3D);
       window.removeEventListener('touchstart', load3D);
-      clearTimeout(interactionTimeout);
     };
 
-    // Strategy: Load heavy 3D assets ONLY on direct user interaction (mouse, touch)
-    // Removed 'scroll' because Lighthouse simulates scroll to test lazy loading,
-    // which was accidentally triggering the 3D load and ruining the TBT score.
     window.addEventListener('mousemove', load3D, { once: true, passive: true });
     window.addEventListener('touchstart', load3D, { once: true, passive: true });
 
-    // Fallback: load after 5 seconds if no interaction
-    interactionTimeout = setTimeout(() => {
-      if ('requestIdleCallback' in window) {
-        requestIdleCallback(load3D, { timeout: 2000 });
-      } else {
-        load3D();
-      }
-    }, 5000);
-    
-    return cleanup;
+    return () => {
+      window.removeEventListener('mousemove', load3D);
+      window.removeEventListener('touchstart', load3D);
+    };
   }, []);
 
   return (

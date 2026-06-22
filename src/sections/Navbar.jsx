@@ -10,7 +10,7 @@ function Navigation({ activeLink, onLinkClick }) {
             {navItems.map((item) => (
                 <li key={item.id} className="nav-li">
                     <Link
-                        className={`nav-link ${activeLink === item.id ? 'text-purple-600 font-bold' : 'text-neutral-400'} hover:text-purple-600 transition-colors duration-300`}
+                        className={`nav-link ${activeLink === item.id ? 'text-purple-500 font-bold' : 'text-neutral-300'} hover:text-purple-500 transition-colors duration-300`}
                         to={item.id}
                         href={`#${item.id}`}
                         smooth={true}
@@ -123,13 +123,13 @@ const Navbar = () => {
             <div className="mx-auto c-space max-w-7xl">
                 <div className="flex items-center justify-between py-2 sm:py-0">
                     <a href="/"
-                        className="text-xl font-bold transition-colors text-neutral-400 hover:text-purple-600"
+                        className="text-xl font-bold transition-colors text-neutral-300 hover:text-purple-500"
                         onClick={() => handleLinkClick('hero')}
                     >
                         Fatra
                     </a>
-                    <button onClick={() => setIsOpen(!isOpen)} className="flex cursor-pointer text-neutral-400
-                    hover:text-purple-600 focus:outline-none sm:hidden">
+                    <button onClick={() => setIsOpen(!isOpen)} className="flex cursor-pointer text-neutral-300
+                    hover:text-purple-500 focus:outline-none sm:hidden">
                         <img src={isOpen ? "assets/close.svg" : "assets/menu.svg"}
                             alt="toggle"
                             width="24"

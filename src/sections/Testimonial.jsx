@@ -26,7 +26,7 @@ const ReviewCard = ({ img, name, username, body }) => {
           <figcaption className="text-sm font-medium text-white">
             {name}
           </figcaption>
-          <p className="text-xs font-medium text-white/40">{username}</p>
+          <p className="text-xs font-medium text-neutral-300">{username}</p>
         </div>
       </div>
       <blockquote className="mt-2 text-sm">{body}</blockquote>
@@ -37,7 +37,7 @@ const ReviewCard = ({ img, name, username, body }) => {
 function Testimonial() {
   return (
     <div className="items-start md:mt-12 c-space">
-      <h2 className="text-heading z-100 text-center">What They <span className="text-purple-600">Thought</span></h2>
+      <h2 className="text-heading z-100 text-center">What They <span className="text-purple-400">Thought</span></h2>
       <div className="relative flex flex-col items-center justify-center w-full mt-12 overflow-hidden">
         <Marquee pauseOnHover className="[--duration:20s]">
           {firstRow.map((review) => (
