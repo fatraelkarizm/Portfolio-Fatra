@@ -13,8 +13,22 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  // esbuild options for production minification
+  esbuild: {
+    drop: ['console', 'debugger'],
+  },
   build: {
     modulePreload: false,
     chunkSizeWarningLimit: 1000,
-  }
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // Separate Three.js into its own chunk so main bundle loads faster
+          'vendor-three': ['three', '@react-three/fiber', '@react-three/drei'],
+          // Separate animation libraries
+          'vendor-motion': ['motion', 'framer-motion', 'gsap'],
+        },
+      },
+    },
+  },
 });

@@ -136,3 +136,9 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Performance: Skip rendering below-fold sections until scrolled into view */
+.lazy-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
+}

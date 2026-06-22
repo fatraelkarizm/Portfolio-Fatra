@@ -90,4 +90,5 @@ export function LostProgrammer(props) {
   )
 }
 
-useGLTF.preload('/models/lost_programmer.glb')
+// Removed useGLTF.preload() - let it load on-demand when Hero3D renders
+// useGLTF.preload('/models/lost_programmer.glb')

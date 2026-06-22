@@ -32,25 +32,35 @@ const App = () => {
         />
       </Routes>
 
-      <Suspense fallback={<div className="text-center py-8">Memuat bagian Tentang...</div>}>
-        <About />
-      </Suspense>
+      <div className="lazy-section">
+        <Suspense fallback={null}>
+          <About />
+        </Suspense>
+      </div>
 
-      <Suspense fallback={<div className="text-center py-8">Memuat bagian Proyek...</div>}>
-        <Projects />
-      </Suspense>
+      <div className="lazy-section">
+        <Suspense fallback={null}>
+          <Projects />
+        </Suspense>
+      </div>
 
-      <Suspense fallback={<div className="text-center py-8">Memuat testimoni...</div>}>
-        <Testimonial />
-      </Suspense>
+      <div className="lazy-section">
+        <Suspense fallback={null}>
+          <Testimonial />
+        </Suspense>
+      </div>
 
-      <Suspense fallback={<div className="text-center py-8">Memuat bagian Kontak...</div>}>
-        <Contact />
-      </Suspense>
+      <div className="lazy-section">
+        <Suspense fallback={null}>
+          <Contact />
+        </Suspense>
+      </div>
 
-      <Suspense fallback={<div className="text-center py-8">Memuat Footer...</div>}>
-        <Footer />
-      </Suspense>
+      <div className="lazy-section">
+        <Suspense fallback={null}>
+          <Footer />
+        </Suspense>
+      </div>
     </div>
   );
 };

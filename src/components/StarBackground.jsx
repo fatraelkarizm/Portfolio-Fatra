@@ -1,14 +1,14 @@
 import React, { useState, useRef, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Points, PointMaterial, Preload } from "@react-three/drei";
+import { Points, PointMaterial } from "@react-three/drei";
 
 
 const StarBackground = (props) => {
   const ref = useRef();
   const [sphere] = useState(() => {
-    const positions = new Float32Array(5000 * 3); // 5000 bintang * 3 koordinat (x,y,z)
-    for (let i = 0; i < 5000; i++) {
-      // Buat posisi acak manual dalam lingkup radius 1.2
+    const count = 1500; // Reduced from 5000 for mobile performance
+    const positions = new Float32Array(count * 3);
+    for (let i = 0; i < count; i++) {
       const x = (Math.random() - 0.5) * 2 * 1.2;
       const y = (Math.random() - 0.5) * 2 * 1.2;
       const z = (Math.random() - 0.5) * 2 * 1.2;
@@ -53,11 +53,12 @@ const StarsCanvas = () => (
     <Canvas
       camera={{ position: [0, 0, 1] }}
       className="w-full h-full"
+      dpr={[1, 1]}
+      gl={{ powerPreference: "low-power", antialias: false }}
     >
       <Suspense fallback={null}>
         <StarBackground />
       </Suspense>
-      <Preload all />
     </Canvas>
   </div>
 );

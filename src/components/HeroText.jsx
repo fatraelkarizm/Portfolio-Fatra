@@ -24,7 +24,7 @@ const HeroText = () => {
                          variants={variants}
                          initial="hidden"
                          animate="visible"
-                         transition={{ delay: 1 }}
+                         transition={{ delay: 0.1 }}
 
                     >Hello, I'm Fatra </motion.h1>
                     <div className="flex flex-col items-start">
@@ -33,7 +33,7 @@ const HeroText = () => {
                               variants={variants}
                               initial="hidden"
                               animate="visible"
-                              transition={{ delay: 1.2 }}
+                              transition={{ delay: 0.2 }}
                          >A Software Engineer Building
                          </motion.p>
 
@@ -41,7 +41,7 @@ const HeroText = () => {
                               variants={variants}
                               initial="hidden"
                               animate="visible"
-                              transition={{ delay: 1.5 }}
+                              transition={{ delay: 0.3 }}
                          >
                               <FlipWords words={words}
                                    className="font-black text-white text-8xl" />
@@ -52,7 +52,7 @@ const HeroText = () => {
                               variants={variants}
                               initial="hidden"
                               animate="visible"
-                              transition={{ delay: 1.8 }}
+                              transition={{ delay: 0.4 }}
                          >
                               Business Solutions
                          </motion.p>
@@ -61,7 +61,7 @@ const HeroText = () => {
                               variants={variants}
                               initial="hidden"
                               animate="visible"
-                              transition={{ delay: 2.0 }}
+                              transition={{ delay: 0.5 }}
                          >
                               I specialize in building scalable, intelligent, and user-centric applications using modern web technologies and AI integration.
                          </motion.p>
@@ -72,7 +72,7 @@ const HeroText = () => {
                               variants={buttonVariants}
                               initial="hidden"
                               animate="visible"
-                              transition={{ delay: 2.1 }}
+                              transition={{ delay: 0.6 }}
                          >
                               <a
                                    href="https://github.com/fatraelkarizm"
@@ -104,7 +104,7 @@ const HeroText = () => {
                          variants={variants}
                          animate="visible"
                          initial="hidden"
-                         transition={{ delay: 1 }}
+                         transition={{ delay: 0.1 }}
                     >
                          Hello, I'm Fatra
                     </motion.p>
@@ -114,7 +114,7 @@ const HeroText = () => {
                               variants={variants}
                               animate="visible"
                               initial="hidden"
-                              transition={{ delay: 1.2 }}
+                              transition={{ delay: 0.2 }}
                          >
                               Software Engineer Building
                          </motion.p>
@@ -123,7 +123,7 @@ const HeroText = () => {
                               variants={variants}
                               animate="visible"
                               initial="hidden"
-                              transition={{ delay: 1.5 }}>
+                              transition={{ delay: 0.3 }}>
                               <FlipWords
                                    words={words}
                                    className="font-bold text-white text-6xl" />
@@ -133,7 +133,7 @@ const HeroText = () => {
                               variants={variants}
                               animate="visible"
                               initial="hidden"
-                              transition={{ delay: 1.8 }}
+                              transition={{ delay: 0.4 }}
                          >
                               Business Solutions
                          </motion.p>
@@ -142,7 +142,7 @@ const HeroText = () => {
                               variants={variants}
                               initial="hidden"
                               animate="visible"
-                              transition={{ delay: 2.0 }}
+                              transition={{ delay: 0.5 }}
                          >
                               I specialize in building scalable, intelligent, and user-centric applications using modern web technologies and AI integration.
                          </motion.p>
@@ -153,7 +153,7 @@ const HeroText = () => {
                               variants={buttonVariants}
                               initial="hidden"
                               animate="visible"
-                              transition={{ delay: 2.1 }}
+                              transition={{ delay: 0.6 }}
                          >
                               <a
                                    href="https://github.com/fatraelkarizm"
