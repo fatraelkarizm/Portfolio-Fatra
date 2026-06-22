@@ -132,6 +132,8 @@ const Navbar = () => {
                     hover:text-purple-600 focus:outline-none sm:hidden">
                         <img src={isOpen ? "assets/close.svg" : "assets/menu.svg"}
                             alt="toggle"
+                            width="24"
+                            height="24"
                             className="w-6 h-6" />
                     </button>
                     <nav className="hidden sm:flex">

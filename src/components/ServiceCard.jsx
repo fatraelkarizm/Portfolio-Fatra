@@ -36,6 +36,8 @@ export const ServiceCard = ({ index, title, icon, onClick }) => (
         <img
           src={icon}
           alt={title}
+          width="128"
+          height="128"
           className='w-32 h-32 object-contain'
         />
         <h3

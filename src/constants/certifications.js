@@ -4,7 +4,7 @@ export const certifications = [
   {
     id: "cert-1",
     title: "Pertamina: Seed and Scale",
-    image: "/assets/certifications/pertamina-seed-n-scale.jpg", 
+    image: "/assets/certifications/pertamina-seed-n-scale.webp", 
     issuer: "Pertamina",
     technologies: [], 
     date: "October 2024",
@@ -15,7 +15,7 @@ export const certifications = [
   {
     id: "cert-2",
     title: "AIESEC Future Leaders Winter Peak 2023/2024",
-    image: "/assets/certifications/Fatra Al K AFL Sertifikat.jpg", 
+    image: "/assets/certifications/Fatra Al K AFL Sertifikat.webp", 
     issuer: "AIESEC",
     technologies: [], 
     date: "November 2023 - January 2024",
@@ -26,7 +26,7 @@ export const certifications = [
   {
     id: "cert-3",
     title: "Marketeers Innovation Challenge Season 1",
-    image: "/assets/certifications/Marketeers-Certificate.png", 
+    image: "/assets/certifications/Marketeers-Certificate.webp", 
     issuer: "Marketeers x Pertamina",
     technologies: [], 
     date: "5 July 2024",
@@ -37,7 +37,7 @@ export const certifications = [
   {
     id: "cert-4",
     title: "Front-End Web Development",
-    image: "/assets/certifications/Sertifikat Fundamental Front-End Web Development 2021 - Fatra Al Khawarizmi.jpg", 
+    image: "/assets/certifications/Sertifikat Fundamental Front-End Web Development 2021 - Fatra Al Khawarizmi.webp", 
     issuer: "Coding Studio",
     technologies: [], 
     date: "June 2025",
@@ -48,7 +48,7 @@ export const certifications = [
   {
     id: "cert-5",
     title: "Front-End Web Development II",
-    image: "/assets/certifications/Sertifikat Fundamental Front-End Web Development II - Fatra Al Khawarizmi.jpg", 
+    image: "/assets/certifications/Sertifikat Fundamental Front-End Web Development II - Fatra Al Khawarizmi.webp", 
     issuer: "Coding Studio",
     technologies: [], 
     date: "June 2025",
@@ -59,7 +59,7 @@ export const certifications = [
   {
     id: "cert-6",
     title: "Fundamental Database MySql",
-    image: "/assets/certifications/Sertifikat Fundamental Database MySQL - Fatra Al Khawarizmi.jpg", 
+    image: "/assets/certifications/Sertifikat Fundamental Database MySQL - Fatra Al Khawarizmi.webp", 
     issuer: "Coding Studio",
     technologies: [], 
     date: "June 2025",
@@ -67,5 +67,4 @@ export const certifications = [
     category: "",
     description: "Certified in Fundamental Database MySql, expanding knowledge and skillset in Database MySql through View, Procedure and Function."
   }
-
 ];

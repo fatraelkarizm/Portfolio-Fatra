@@ -162,6 +162,8 @@ const Contact = () => {
             <img
               src="/assets/coding-pov.webp"
               alt="coding"
+              width="1328"
+              height="813"
               className="w-full md:w-fit lg:w-fit"
             />
             <div className="pt-8">

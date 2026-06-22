@@ -110,6 +110,8 @@ export const Projects = () => {
                     src={project.image}
                     alt={project.title}
                     loading="lazy"
+                    width="600"
+                    height="400"
                     className="w-full h-fit object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
@@ -214,6 +216,8 @@ export const Projects = () => {
                     src={img}
                     alt={`${selectedProject.title} ${idx + 1}`}
                     loading="lazy"
+                    width="800"
+                    height="500"
                     className="w-full h-auto object-cover rounded-lg"
                   />
                 ))}
@@ -223,6 +227,8 @@ export const Projects = () => {
                 src={selectedProject.image}
                 alt={selectedProject.title}
                 loading="lazy"
+                width="800"
+                height="500"
                 className="w-full h-auto object-cover rounded-t-lg"
               />
             )}
