@@ -57,6 +57,15 @@ const HeroText = () => {
                               Business Solutions
                          </motion.p>
 
+                         <motion.p className="text-lg text-neutral-400 mt-4 max-w-2xl"
+                              variants={variants}
+                              initial="hidden"
+                              animate="visible"
+                              transition={{ delay: 2.0 }}
+                         >
+                              I specialize in building scalable, intelligent, and user-centric applications using modern web technologies and AI integration.
+                         </motion.p>
+
                          {/* Desktop Buttons */}
                          <motion.div
                               className="flex flex-row gap-4 mt-16"
@@ -127,6 +136,15 @@ const HeroText = () => {
                               transition={{ delay: 1.8 }}
                          >
                               Business Solutions
+                         </motion.p>
+
+                         <motion.p className="text-base text-neutral-400 mt-4 max-w-sm"
+                              variants={variants}
+                              initial="hidden"
+                              animate="visible"
+                              transition={{ delay: 2.0 }}
+                         >
+                              I specialize in building scalable, intelligent, and user-centric applications using modern web technologies and AI integration.
                          </motion.p>
 
                          {/* Mobile Buttons */}
